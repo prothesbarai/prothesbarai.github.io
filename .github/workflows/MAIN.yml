@@ -1,8 +1,6 @@
 # GitHub Action for generating a contribution graph with a snake eating your contributions.
 
 name: Generate Snake
-permissions: 
-  contents: write
 
 # Controls when the action will run. This action runs every 6 hours.
 
@@ -28,7 +26,8 @@ jobs:
       - uses: actions/checkout@v2
       
     # Generates the snake  
-      - uses: Platane/snk/svg-only@v3
+      - uses: Platane/snk@master
+        id: snake-gif
         with:
           github_user_name: prothesbarai
           # outputs: dist/github-snake.svg

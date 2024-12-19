@@ -27,15 +27,17 @@ jobs:
     # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - uses: actions/checkout@v2
       
-    # Generates the snake  
+    # Generates the snake with a dark mode color palette
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: prothesbarai
           outputs:
-            dist/github-snake.svg
-          # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
-          # gif_out_path: dist/github-contribution-grid-snake.gif
-          # svg_out_path: dist/github-contribution-grid-snake.svg
+            dist/github-snake-dark.svg
+          color_snake: "#ffffff" # White snake for dark mode
+          color_dots_1: "#1e1e1e" # Dark gray for empty dots
+          color_dots_2: "#333333" # Slightly lighter gray for filled dots
+          color_dots_3: "#4f4f4f" # Even lighter gray
+          color_dots_4: "#666666" # Lightest gray
           
      # show the status of the build. Makes it easier for debugging (if there's any issues).
       - run: git status

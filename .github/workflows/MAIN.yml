@@ -10,23 +10,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
+      # Install dependencies for canvas
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk2.0-dev libgdk-pixbuf2.0-dev libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 
       # Generate the snake
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: prothesbarai
-          outputs:
+          outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
-      # Post-process the SVG to adjust colors
-      - name: Modify SVG for dark mode
-        run: |
-          sed -i 's/fill="#ffffff"/fill="none" stroke="#4f4f4f" stroke-width="1"/g' dist/github-snake-dark.svg
-
-      # Check the status of changes
+      # Check the status of the changes
       - run: git status
 
       # Push changes

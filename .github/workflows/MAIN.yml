@@ -27,17 +27,18 @@ jobs:
     # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - uses: actions/checkout@v2
       
-    # Generates the snake with a dark mode color palette
+    # Generates the snake with transparent dots and gray borders
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: prothesbarai
           outputs:
             dist/github-snake-dark.svg
           color_snake: "#ffffff" # White snake for dark mode
-          color_dots_1: "#1e1e1e" # Dark gray for empty dots
-          color_dots_2: "#333333" # Slightly lighter gray for filled dots
-          color_dots_3: "#4f4f4f" # Even lighter gray
-          color_dots_4: "#666666" # Lightest gray
+          color_dots_1: "rgba(0,0,0,0)" # Fully transparent for empty dots
+          color_dots_2: "rgba(0,0,0,0)" # Fully transparent for partially filled dots
+          color_dots_3: "rgba(0,0,0,0)" # Fully transparent for medium filled dots
+          color_dots_4: "rgba(0,0,0,0)" # Fully transparent for fully filled dots
+          stroke_color: "#4f4f4f" # Gray border for all dots
           
      # show the status of the build. Makes it easier for debugging (if there's any issues).
       - run: git status

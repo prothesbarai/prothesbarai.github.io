@@ -65,4 +65,4 @@
 </p>
 
 
-![snake gif](https://github.com/prothesbarai/prothesbarai/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/prothesbarai/prothesbarai/blob/output/github-snake.svg)

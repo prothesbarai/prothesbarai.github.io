@@ -58,11 +58,12 @@
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats-salesp07.vercel.app/api?username=prothesbarai&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="Prothes Barai" /></p>
 
-
-
-<p style="margin-top:500px !important;">
+<p>
   <img align="center" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=prothesbarai&count_private=true&theme=react&border_radius=10" alt="Prothes Barai"/>
 </p>
-
+  <br>
+<div align="center">
+  <h2>🐍 My Contributions 🐍</h2>
+</div>
 
 ![snake gif](https://github.com/prothesbarai/prothesbarai/blob/output/github-snake-dark.svg)

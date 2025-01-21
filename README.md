@@ -69,5 +69,4 @@
   <h2>🐍 My Contributions 🐍</h2>
 </div>
 
-
 ![snake gif](https://github.com/prothesbarai/prothesbarai/blob/output/github-snake-dark.svg)

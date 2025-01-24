@@ -1,4 +1,4 @@
-<h1 align="center">
+                         <h1 align="center">
   <p align="center">
     <a href="https://prothesbarai.github.io/prothesbarai/">
       <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=1000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=155&height=45&lines=Hi 👋, I'm" alt="Hi 👋, I'm" />
@@ -25,7 +25,6 @@
 </p>
 
 <p align="left"> <a href="https://twitter.com/prothesbarai" target="blank"><img src="https://img.shields.io/twitter/follow/prothesbarai?logo=twitter&style=for-the-badge" alt="prothesbarai" /></a> </p>
-
 
 
 - 🔭 I’m currently working on **Android Apps Development**

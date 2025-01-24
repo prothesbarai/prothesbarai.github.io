@@ -1,4 +1,4 @@
-                         <h1 align="center">
+<h1 align="center">
   <p align="center">
     <a href="https://prothesbarai.github.io/prothesbarai/">
       <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=1000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=155&height=45&lines=Hi 👋, I'm" alt="Hi 👋, I'm" />
@@ -9,6 +9,7 @@
   <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Android+Software+Developer!;Front-end+developer!;Wordpress+Expert;Java+Developer;" />
   </h1>
+</h1>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif" alt="Programming" width="400"/>

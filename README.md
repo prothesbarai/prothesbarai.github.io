@@ -60,7 +60,7 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=prothesbarai&langs_count=15&layout=compact&theme=react&border_radius=10&size_weight=0.5&count_weight=0.5" alt="Prothes Barai" /></p>
 <p>&nbsp;<img align="center" src="https://github-readme-stats-salesp07.vercel.app/api?username=prothesbarai&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="Prothes Barai" /></p>
-
+ 
 <p>
   <img align="center" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=prothesbarai&count_private=true&theme=react&border_radius=10" alt="Prothes Barai"/>
 </p>

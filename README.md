@@ -11,7 +11,7 @@
   </h1>
 </h1>   
 
-<p align="center">  
+<p align="center">   
   <img src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif" alt="Programming" width="400"/>  
 </p>
 <h3 align="center">A passionate Android Software developer & Front-End Web Designer from Bangladesh</h3>
@@ -23,7 +23,6 @@
     <img src="https://github-profile-trophy.vercel.app/?username=prothesbarai&theme=onedark" alt="prothesbarai" />
   </a> 
 </p>  
-
 
 <p align="left"> <a href="https://twitter.com/prothesbarai" target="blank"><img src="https://img.shields.io/twitter/follow/prothesbarai?logo=twitter&style=for-the-badge" alt="prothesbarai" /></a> </p>
 

@@ -26,7 +26,6 @@
 
 <p align="left"> <a href="https://twitter.com/prothesbarai" target="blank"><img src="https://img.shields.io/twitter/follow/prothesbarai?logo=twitter&style=for-the-badge" alt="prothesbarai" /></a> </p>
 
-
 - 🔭 I’m currently working on **Android Apps Development**
 
 - 🌱 I’m currently learning **Android Apps Development and Unreal Engine**

@@ -17,7 +17,6 @@
 </p>
 
 
-
 <h3 align="center">A passionate Android Software developer & Front-End Web Designer from Bangladesh</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=prothesbarai&label=Profile%20views&color=0e75b6&style=flat" alt="prothesbarai" /> </p>

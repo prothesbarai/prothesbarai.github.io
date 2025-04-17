@@ -1,10 +1,9 @@
 <h1 align="center"> 
   <p align="center">
     <a href="https://prothesbarai.github.io/prothesbarai/">
-      
+      <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=1000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=155&height=45&lines=Hi 👋, I'm" alt="Hi 👋, I'm" />
       <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=0000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=225&height=45&lines=Prothes+Barai" alt="Prothes Barai" /> 
-      
-    </a
+    </a>
   </p> 
   <!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00DBFF&center=true&vCenter=true&random=false&width=440&height=45&lines=Android+Software+Developer!;Front-end+developer!;Wordpress+Expert;Java+Developer&size=22" /> -->
   <h1 align="center"> 

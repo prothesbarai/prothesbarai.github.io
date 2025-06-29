@@ -38,7 +38,7 @@
 
 - 📄 Know about my experiences [https://prothesbarai.github.io/prothesbarai/pages/skills.html](https://prothesbarai.github.io/prothesbarai/pages/skills.html)
 
-- ⚡ Fun fact **I'm Funny**
+- ⚡ Fun fact **I'm Funny**                                        
 
 <h3 align="left">Connect with me:</h3>    
 <p align="left">

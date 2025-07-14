@@ -4,7 +4,7 @@
 <!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00DBFF&center=true&vCenter=true&random=false&width=440&height=45&lines=Android+Software+Developer!;Front-end+developer!;Wordpress+Expert;Java+Developer&size=22" /> -->
 
   <h1 align="center"> 
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Android+Software+Developer!;Flutter+Developer!;Front-end+developer!;Wordpress+Expert;Python+Developer;" />     
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.!;Flutter+Expart!;Front-end+Expart!;Wordpress+Expert;Java+Expart;Python+Expart;Firebase+Expart;SQL+Expart;" />     
   </h1>        
                                                                   
                                                             
@@ -12,7 +12,7 @@
 <p align="center">                                     
   <img src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif" alt="Programming" width="400"/>           
 </p>
-<h3 align="center">A passionate Android Software developer & Front-End Web Designer from Bangladesh</h3>  
+<h3 align="center">A passionate Software Engr. from Bangladesh</h3>  
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=prothesbarai&label=Profile%20views&color=0e75b6&style=flat" alt="prothesbarai" /> </p>        
 
 <p align="left"> 
@@ -23,13 +23,13 @@
 
 <p align="left"> <a href="https://twitter.com/prothesbarai" target="blank"><img src="https://img.shields.io/twitter/follow/prothesbarai?logo=twitter&style=for-the-badge" alt="prothesbarai" /></a> </p>
 
-- 🔭 I’m currently working on **Android Apps Development**
+- 🔭 I’m currently working on **Ass. Software Engr.**
 
-- 🌱 I’m currently learning **Android Apps Development and Unreal Engine**
+- 🌱 I’m currently learning **AI and Unreal Engine**
 
-- 👯 I’m looking to collaborate on **Android Apps Development**
+- 👯 I’m looking to collaborate on **Software , AI, Security**
 
-- 🤝 I’m looking for help with **Android Apps Development**                                        
+- 🤝 I’m looking for help with **Software , AI, Security**                                        
 
 - 👨‍💻 All of my projects are available at [https://prothesbarai.github.io/prothesbarai/](https://prothesbarai.github.io/prothesbarai/)
 

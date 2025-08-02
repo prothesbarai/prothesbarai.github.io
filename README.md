@@ -7,7 +7,7 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.;Flutter+Expart;Front-end+Expart;Wordpress+Expert;Java+Expart;Python+Expart;Firebase+Expart;SQL+Expart;" />     
   </h1>              
                                                                   
-                                                             
+                                                               
 </h1>                                                                                                                                                        
 <p align="center">                                     
   <img src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif" alt="Programming" width="400"/>           

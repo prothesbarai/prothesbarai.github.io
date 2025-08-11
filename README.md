@@ -7,6 +7,7 @@
 <!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00DBFF&center=true&vCenter=true&random=false&width=440&height=45&lines=Android+Software+Developer!;Front-end+developer!;Wordpress+Expert;Java+Developer&size=22" /> -->
 <h1 align="center"> 
     <!--<img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=0000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=285&height=45&lines=I'm+Prothes+Barai" alt="I'm+Prothes Barai" /> -->
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.;Flutter+Expart;Front-end+Expart;Wordpress+Expert;Java+Expart;Python+Expart;Firebase+Expart;SQL+Expart;" />   
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.;Flutter+Expart;Front-end+Expart;Wordpress+Expert;Java+Expart;Python+Expart;Firebase+Expart;SQL+Expart;" />     
 </h1> 
              

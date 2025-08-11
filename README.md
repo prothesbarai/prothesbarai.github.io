@@ -6,10 +6,23 @@
 </h1>
 <!-- <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00DBFF&center=true&vCenter=true&random=false&width=440&height=45&lines=Android+Software+Developer!;Front-end+developer!;Wordpress+Expert;Java+Developer&size=22" /> -->
 
-  <h1 align="center"> 
-    <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=0000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=285&height=45&lines=I'm+Prothes+Barai" alt="I'm+Prothes Barai" /> 
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=;35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.;Flutter+Expart;Front-end+Expart;Wordpress+Expert;Java+Expart;Python+Expart;Firebase+Expart;SQL+Expart;" />     
-  </h1>                
+  <!-- Container-centered H1 -->
+<h1 style="display:flex; align-items:center; justify-content:center; gap:16px; margin:0; padding:12px;">
+  <!-- প্রথম ইমেজ: size=35 ঠিক আছে -->
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&pause=0000&color=00DBFF&center=true&vCenter=true&repeat=false&random=false&width=285&height=45&lines=I'm+Prothes+Barai"
+    alt="I'm Prothes Barai"
+    style="height:45px; max-width:100%; display:block; object-fit:contain;"
+  />
+
+  <!-- দ্বিতীয় ইমেজ: size পারামিটার থেকে অনিয়মিত সেমিকোলন বাদ দিয়ে height একই রেখেছি -->
+  <img
+    src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Software+Engr.;Flutter+Expert;Front-end+Expert;Wordpress+Expert;Java+Expert;Python+Expert;Firebase+Expert;SQL+Expert;"
+    alt="skills"
+    style="height:45px; max-width:100%; display:block; object-fit:contain;"
+  />
+</h1>
+             
                                                                                                                                                
                                                                  
 </h1>                                                                                                                                                        

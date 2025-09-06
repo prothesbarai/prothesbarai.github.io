@@ -1,6 +1,6 @@
 [
   {
-    "name": "Flutter",
+    "name": "FLUTTER",
     "items": [
       {
         "title": "Setup Environment Guidelines",
@@ -53,11 +53,25 @@
             "code": "flutter pub run flutter_launcher_icons:main"
           }
         ]
+      },{
+        "title": "Secure build flutter projects with obfuscate",
+        "sections": [
+          {
+            "description": "<b style='color:#179caf;'>Step .aab:</b> For .aab File —  : <br>Release mode: ✅ Explicitly release, Play Store ready<br>Obfuscation: ✅ Yes<br>Mapping folder: ✅ Custom (build/Prothes/symbols) – ভালো organized<br>Verbose log: ✅ Yes (debugging সহজ)<br>Security: High, কারণ release mode + obfuscation combined<br>Best practice: ✅ Recommended",
+            "code": "flutter build appbundle --release --obfuscate --split-debug-info=build/prothes/symbols --verbose"
+          },{
+            "description": "<b style='color:#179caf;'>Step .apk:</b> For .apk File — (Android): <br>Release mode: ✅ Explicitly release, Play Store ready<br>Obfuscation: ✅ Yes<br>Mapping folder: ✅ Custom (build/Prothes/symbols) – ভালো organized<br>Verbose log: ✅ Yes (debugging সহজ)<br>Security: High, কারণ release mode + obfuscation combined<br>Best practice: ✅ Recommended",
+            "code": "flutter build apk --release --obfuscate --split-debug-info=build/prothes/symbols --verbose"
+          },{
+            "description": "<b style='color:#179caf;'>Step .ipa:</b> For .ipa File — (iOS):  <br>Release mode: ✅ Explicitly release, Play Store ready<br>Obfuscation: ✅ Yes<br>Mapping folder: ✅ Custom (build/Prothes/symbols) – ভালো organized<br>Verbose log: ✅ Yes (debugging সহজ)<br>Security: High, কারণ release mode + obfuscation combined<br>Best practice: ✅ Recommended",
+            "code": "flutter build ipa --release --obfuscate --split-debug-info=build/prothes/symbols --verbose"
+          }
+        ]
       }
     ]
   },
   {
-    "name": "Dart",
+    "name": "DART",
     "items": [
       {
         "title": "Dart ListView Example",
@@ -86,6 +100,323 @@
           }
         ]
       }
+    ]
+  },{
+    "name": "XML",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "JAVA",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Python",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SQL",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "COMMAND",
+    "items": [
+      {
+        "title": "Windows Bash Command",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          }
+        ]
+      },{
+        "title": "Linux Command",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          }
+        ]
+      },{
+        "title": "Mac Command",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "WORDPRESS",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "FIREBASE",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Regex Pattern",
+    "items": [
+      {
+        "title": "✅ শুধু অক্ষর (a-z, A-Z)",
+        "sections": [
+          {
+            "description": "Explain: শুরু থেকে শেষ পর্যন্ত শুধুমাত্র ছোট হাতের বা বড় হাতের অক্ষর থাকবে।",
+            "code": "^[a-zA-Z]+$"
+          }
+        ]
+      },{
+        "title": "✅ শুধু সংখ্যা (0-9)",
+        "sections": [
+          {
+            "description": "Explain: শুধু সংখ্যা থাকবে, অন্য কিছু চলবে না।",
+            "code": "^[0-9]+$"
+          }
+        ]
+      },{
+        "title": "✅ অক্ষর + সংখ্যা (Alphanumeric)",
+        "sections": [
+          {
+            "description": "Explain: শুধুমাত্র অক্ষর বা সংখ্যা মিলবে।",
+            "code": "^[a-zA-Z0-9]+$"
+          }
+        ]
+      },{
+        "title": "✅ অক্ষর + সংখ্যা + স্পেস",
+        "sections": [
+          {
+            "description": "Explain: অক্ষর, সংখ্যা, আর স্পেস মিলে যাবে।",
+            "code": "^[a-zA-Z0-9\\s]+$"
+          }
+        ]
+      },{
+        "title": "✅ অক্ষর + সংখ্যা + স্পেস + নির্দিষ্ট কিছু সিম্বল (#, -, ,)",
+        "sections": [
+          {
+            "description": "Explain: অক্ষর, সংখ্যা, স্পেস, # , - , , ব্যবহার করা যাবে।",
+            "code": "^[a-zA-Z0-9\\s#-,]+$"
+          }
+        ]
+      },{
+        "title": "✅ শুধু ইমেইল ভ্যালিডেশন",
+        "sections": [
+          {
+            "description": "Explain: name@domain.com এর মত ফরম্যাট মিলবে।",
+            "code": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+          }
+        ]
+      },{
+        "title": "✅ বাংলাদেশি মোবাইল নাম্বার (01 দিয়ে শুরু)",
+        "sections": [
+          {
+            "description": "Explain: ১১ ডিজিট, 01 দিয়ে শুরু, তারপর 3–9 এর মধ্যে একটা সংখ্যা, পরে আরও 8 সংখ্যা।",
+            "code": "^01[3-9][0-9]{8}$"
+          }
+        ]
+      },{
+        "title": "✅ স্ট্রং পাসওয়ার্ড (একটা বড় অক্ষর + ছোট অক্ষর + সংখ্যা + বিশেষ চিহ্ন, কমপক্ষে 8 অক্ষর)",
+        "sections": [
+          {
+            "description": "Explain: <br>কমপক্ষে 1 বড় অক্ষর<br>কমপক্ষে 1 ছোট অক্ষর<br>কমপক্ষে 1 সংখ্যা<br>কমপক্ষে 1 স্পেশাল ক্যারেক্টার<br>মোট দৈর্ঘ্য ≥ 8",
+            "code": "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\\$%^&*]).{8,}$"
+          }
+        ]
+      },{
+        "title": "✅ কেবল তারিখ",
+        "sections": [
+          {
+            "description": "Explain: বছর-মাস-তারিখ ফরম্যাট (যেমন 2025-09-06)",
+            "code": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+          },{
+            "description": "Explain: তারিখ-মাস-বছর ফরম্যাট (যেমন 06-09-2025)",
+            "code": "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\\d{4}$"
+          }
+        ]
+      },{
+        "title": "✅ শুধু URL",
+        "sections": [
+          {
+            "description": "Explain: http/https, www সহ বা ছাড়া URL মিলবে।",
+            "code": "^(https?:\/\/)?(www\\.)?[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\/[^\\s]*)?$"
+          }
+        ]
+      },{
+        "title": "✅ কেবলমাত্র বাংলা অক্ষর",
+        "sections": [
+          {
+            "description": "Explain: শুধু বাংলা অক্ষর মিলবে।",
+            "code": "^[\\u0980-\\u09FF]+$"
+          }
+        ]
+      },{
+        "title": "✅ IPv4 Address",
+        "sections": [
+          {
+            "description": "Explain: Server config, Networking software",
+            "code": "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+          }
+        ]
+      },{
+        "title": "✅ File Extension (যেমন .jpg, .png, .pdf)",
+        "sections": [
+          {
+            "description": "Explain: File upload validation",
+            "code": "^.*\\.(jpg|png|pdf|docx)$"
+          }
+        ]
+      },{
+        "title": "✅ ইউজারনেম (3–16 অক্ষর)",
+        "sections": [
+          {
+            "description": "Explain: শুধু অক্ষর, সংখ্যা আর _ ব্যবহার করা যাবে। সর্বনিম্ন দৈর্ঘ্য 3 অক্ষর, সর্বোচ্চ 16 অক্ষর",
+            "code": "^[a-zA-Z0-9_]{3,16}$"
+          }
+        ]
+      },{
+        "title": "✅ সময় (24 Hour format – HH:MM)",
+        "sections": [
+          {
+            "description": "Explain: যেমন 09:30, 23:59",
+            "code": "^([01]\\d|2[0-3]):([0-5]\\d)$"
+          }
+        ]
+      },{
+        "title": "✅ Hex Color Code",
+        "sections": [
+          {
+            "description": "Explain: যেমন #fff বা #ffffff",
+            "code": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Git Commands",
+    "items": [
+      {
+        "title": "Git Connected With Github",
+        "sections": [
+          {
+            "description": "<b style='color:#179caf;'>🛠 Step 1:</b> Git ইনস্টল আছে কিনা চেক",
+            "code": "git --version"
+          },
+          {
+            "description": "<b style='color:#179caf;'>🛠 Step 2:</b> Git Global Config সেট",
+            "code": "git config --global user.name 'YourGitHubUsername'<br>git config --global user.email 'youremail@example.com'"
+          }
+        ]
+      },{
+        "title": "First Project Upload to Github",
+        "sections": [
+          {
+            "description": "<b style='color:#179caf;'>🛠 Step 1:</b> Open Github & create a new repository then create a project on your pc . and this project root location open your git bash.. And run this command sequentially :",
+            "code": "git init<br>git branch -M main<br>git add README.md<br>git add .<br>git commit -m 'first commit'<br>git remote add origin https://github.com/prothesbarai/repository_name.git<br>git push -u origin main"
+          }
+        ]
+      },{
+        "title": "Existing Project Download From Github",
+        "sections": [
+          {
+            "description": "<b style='color:#179caf;'>🛠 Step 1:</b> Open Github > repository > click projects file name > click code button > copy HTTPS link and go to your pc folder location , where you want to keep. then here this location open your cmd / Command Prompt , and type this command : ",
+            "code": "git clone copy_HTTPS_link_paste_here"
+          }
+        ]
+      },{
+        "title": "Existing Project Upload to Github",
+        "sections": [
+          {
+            "description": "<b style='color:#179caf;'>🛠 Step 1:</b> Open your projects root folder > then right click and open git bash , then type this command : ",
+            "code": "git add .<br>git commit -m 'commit_name'<br>git push"
+          }
+        ]
+      }
+
     ]
   }
 ]

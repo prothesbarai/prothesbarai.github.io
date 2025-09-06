@@ -3,28 +3,54 @@
     "name": "Flutter",
     "items": [
       {
-        "title": "Flutter Install Guide",
+        "title": "Setup Environment Guidelines",
         "sections": [
           {
-            "description": "Step 1: Install Flutter SDK",
-            "code": "flutter --version"
-          },
-          {
-            "description": "Step 2: Setup PATH",
+            "description": "<b style='color:#179caf;;'>Step 1:</b> Download Flutter and Android Studio <br><a href='https://docs.flutter.dev/get-started/install/windows/mobile' target='_blank'>Flutter Download</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=' https://developer.android.com/studio?gad_source=1&gad_campaignid=21831783582&gbraid=0AAAAAC-IOZmOUWYARCCGjuQlYdr29-HU9&gclid=CjwKCAjwsZPDBhBWEiwADuO6y7SXpKX9XDeRh99VdaF3nIb7CtZ4WLBbaViBH2G7F87q0wpxX3i7MBoCP2sQAvD_BwE&gclsrc=aw.ds' target='_blank'>Android Studio Download Link</a>",
             "code": ""
           },
           {
-            "description": "Step 3: Check Installation",
+            "description": "<b style='color:#179caf;'>Step 2:</b> Extract Flutter File…. And  c drive Create    flutter/src/  path and paste extractor file …. So final path is   flutter/src/flutter/",
+            "code": ""
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 3:</b> Open Environment Variables and set User Variable PATH as ",
+            "code": "C:/flutter/src/flutter/bin"
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 4:</b> Install Android Studio",
+            "code": ""
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 5:</b> Then Install Android Studio Plugins [ flutter , Dart ] & Restart IDE",
+            "code": ""
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 6:</b> Open Android Studio > SDK Manager > SDK Tools > Now Install NDK (Side by Side) & Install Android SDK Command line Tools",
+            "code": ""
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 7:</b> Open root cmd and  run : ",
             "code": "flutter doctor"
+          },
+          {
+            "description": "<b style='color:#179caf;'>Step 8:</b> then run :   ",
+            "code": "flutter doctor --android-licenses"
           }
         ]
       },
       {
-        "title": "Flutter Widget Example",
+        "title": "App Icon Set",
         "sections": [
           {
-            "description": "Example of ElevatedButton",
-            "code": "ElevatedButton(onPressed: (){}, child: Text('Click Me'))"
+            "description": "<b style='color:#179caf;'>Step 1:</b> Run Android Studio Terminal Command : Or Manually add in <mark>pubspec.yaml</mark> file",
+            "code": "flutter pub add flutter_launcher_icons"
+          },{
+            "description": "<b style='color:#179caf;'>Step 2:</b> Add in <mark>pubspec.yaml</mark> file",
+            "code": "flutter_icons:<br>\tandroid: true<br>\tios: true<br>\timage_path: 'assets/icon/icon.png'"
+          },{
+            "description": "<b style='color:#179caf;'>Step 3:</b> Now Run Android Studio Terminal Command : ",
+            "code": "flutter pub run flutter_launcher_icons:main"
           }
         ]
       }

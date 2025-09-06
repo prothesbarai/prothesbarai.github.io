@@ -11,9 +11,9 @@ $(document).ready(function () {
     categories.forEach((cat, index) => {
       categoryContainer.append(`
         <div class="col-md-4 col-sm-6 mb-3">
-          <div class="card text-center shadow-sm border-0 bg-info text-dark category-card" data-index="${index}">
+          <div class="card text-center shadow-sm border-0 text-white category-card" data-index="${index}" style="background-color:#0bceaf;">
             <div class="card-body">
-              <a href="#" class="stretched-link text-decoration-none text-dark font-weight-medium">
+              <a href="#" class="stretched-link text-decoration-none text-white font-weight-medium">
                 ${cat.name} [${cat.items.length}]
               </a>
             </div>

@@ -6,7 +6,7 @@
         "title": "Setup Environment Guidelines",
         "sections": [
           {
-            "description": "<b style='color:#179caf;;'>Step 1:</b> Download Flutter and Android Studio <br><a href='https://docs.flutter.dev/get-started/install/windows/mobile' target='_blank'>Flutter Download</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=' https://developer.android.com/studio?gad_source=1&gad_campaignid=21831783582&gbraid=0AAAAAC-IOZmOUWYARCCGjuQlYdr29-HU9&gclid=CjwKCAjwsZPDBhBWEiwADuO6y7SXpKX9XDeRh99VdaF3nIb7CtZ4WLBbaViBH2G7F87q0wpxX3i7MBoCP2sQAvD_BwE&gclsrc=aw.ds' target='_blank'>Android Studio Download Link</a>",
+            "description": "<b style='color:#179caf;;'>Step 1:</b> Download Flutter and Android Studio <br><a href='https://docs.flutter.dev/get-started/install/windows/mobile' target='_blank'>Flutter Download</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=' https://developer.android.com/studio' target='_blank'>Android Studio Download Link</a>",
             "code": ""
           },
           {

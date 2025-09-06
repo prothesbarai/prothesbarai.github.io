@@ -12,9 +12,7 @@
   <!-- Favicon -->
   <link href="../img/favicon.png" rel="icon">
   <!-- Google Web Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Atomic+Age&family=Concert+One&family=Croissant+One&family=Kenia&family=Lobster&family=Nosifer&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Atomic+Age&family=Concert+One&family=Croissant+One&family=Kenia&family=Lobster&family=Nosifer&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -112,12 +110,19 @@
 
 
 
+  <!-- Date Time Show Section -->
+  <div class="container d-flex justify-content-center align-items-center my-5 py-5">
+     <div id="dateTime" class="text-center display-4 display-md-3 display-lg-1 fw-bold"></div>
+  </div>
+
+
+
 
 
 
 
   <!-- Categories Section -->
-  <div class="container my-5">
+  <div class="container my-5 vh-100">
     <div class="row" id="categoryContainer"></div>
   </div>
 
@@ -243,6 +248,31 @@
 
   <!-- Only For Help Page -->
   <script src="../js/help/help.js"></script>
+
+  <!-- Clock -->
+  <Script>
+    const dateTimeDiv = document.getElementById('dateTime');
+    function updateDateTime() {
+      const now = new Date();
+      // Bangladesh Time offset: GMT+6
+      const bdOffset = 6 * 60; // 6 hours in minutes
+      const bdTime = new Date(now.getTime() + (bdOffset + now.getTimezoneOffset()) * 60000);
+      let hours = bdTime.getHours();
+      const minutes = String(bdTime.getMinutes()).padStart(2, '0');
+      const seconds = String(bdTime.getSeconds()).padStart(2, '0');
+      const milliseconds = String(bdTime.getMilliseconds()).padStart(3, '0');
+      // 12-hour format
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 -> 12
+      hours = String(hours).padStart(2, '0');
+      const timeString = `${hours}:${minutes}:${seconds}:${milliseconds} ${ampm}`;
+      dateTimeDiv.innerText = timeString;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1); // live update
+  </Script>
 </body>
 
 </html>

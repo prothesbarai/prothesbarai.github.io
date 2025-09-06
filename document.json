@@ -11,7 +11,7 @@
           },
           {
             "description": "Step 2: Setup PATH",
-            "code": "export PATH=$PATH:/flutter/bin"
+            "code": ""
           },
           {
             "description": "Step 3: Check Installation",

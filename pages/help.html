@@ -116,71 +116,46 @@
 
 
 
-  <!-- Categories Section Start -->
+<!-- Categories Section -->
 <div class="container my-5">
-  <div class="row">
-    <!-- Category Cards -->
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card text-center shadow-sm border-0 bg-info text-dark category-card" data-items='["Item 1","Item 2"]'>
-        <div class="card-body">
-          <a href="#" class="stretched-link text-decoration-none text-dark font-weight-medium">Laravel & Vue [2]</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card text-center shadow-sm border-0 bg-info text-dark category-card" data-items='["Flutter Item 1","Flutter Item 2","Flutter Item 3","Flutter Item 4","Flutter Item 5","Flutter Item 6","Flutter Item 7","Flutter Item 8","Flutter Item 9","Flutter Item 10","Flutter Item 11","Flutter Item 12","Flutter Item 13","Flutter Item 14","Flutter Item 15","Flutter Item 16","Flutter Item 17","Flutter Item 18","Flutter Item 19","Flutter Item 20","Flutter Item 21","Flutter Item 22","Flutter Item 23","Flutter Item 24","Flutter Item 25"]'>
-        <div class="card-body">
-          <a href="#" class="stretched-link text-decoration-none text-dark font-weight-medium">Flutter [25]</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 mb-3">
-      <div class="card text-center shadow-sm border-0 bg-info text-dark category-card" data-items='["Command 1","Command 2","Command 3","Command 4","Command 5","Command 6","Command 7","Command 8","Command 9","Command 10","Command 11","Command 12","Command 13","Command 14","Command 15","Command 16","Command 17"]'>
-        <div class="card-body">
-          <a href="#" class="stretched-link text-decoration-none text-dark font-weight-medium">Linux Commands [17]</a>
-        </div>
-      </div>
-    </div>
-    <!-- একইভাবে বাকি categories add করবে -->
-  </div>
+  <div class="row" id="categoryContainer"></div>
 </div>
-<!-- Categories Section End -->
 
-<!-- Bootstrap Modal -->
-<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<!-- Category Modal -->
+<div class="modal fade" id="categoryModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="categoryModalLabel">Category Items</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <ul class="list-group" id="modalList">
-          <!-- Items dynamically added here -->
-        </ul>
+        <ul class="list-group" id="modalList"></ul>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Item Detail Modal -->
+<div class="modal fade" id="itemModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="itemModalLabel">Item Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="itemDescription"></p>
+        <div class="bg-dark text-white p-3 rounded position-relative">
+          <pre id="itemCode" class="mb-0"></pre>
+          <button class="btn btn-sm btn-primary position-absolute" style="top:10px; right:10px;" id="copyCodeBtn">
+            Copy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -269,22 +244,7 @@
 
 
   <!-- Only For Help Page -->
-  <script>
-  $(document).ready(function(){
-    $('.category-card').click(function(e){
-      e.preventDefault();
-      var items = $(this).data('items'); // array of items
-      var title = $(this).text().trim();
-      $('#categoryModalLabel').text(title);
-      var list = $('#modalList');
-      list.empty();
-      items.forEach(function(item){
-        list.append('<li class="list-group-item">'+item+'</li>');
-      });
-      $('#categoryModal').modal('show');
-    });
-  });
-</script>
+  <script src="../js/help/help.js"></script> 
 </body>
 
 </html>

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Flutter",
+    "items": [
+      {
+        "title": "Flutter Install Guide",
+        "sections": [
+          {
+            "description": "Step 1: Install Flutter SDK",
+            "code": "flutter --version"
+          },
+          {
+            "description": "Step 2: Setup PATH",
+            "code": "export PATH=$PATH:/flutter/bin"
+          },
+          {
+            "description": "Step 3: Check Installation",
+            "code": "flutter doctor"
+          }
+        ]
+      },
+      {
+        "title": "Flutter Widget Example",
+        "sections": [
+          {
+            "description": "Example of ElevatedButton",
+            "code": "ElevatedButton(onPressed: (){}, child: Text('Click Me'))"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dart",
+    "items": [
+      {
+        "title": "Dart ListView Example",
+        "sections": [
+          {
+            "description": "Creating ListView.builder",
+            "code": "ListView.builder(itemCount: 10, itemBuilder: (ctx,i)=>Text('Item $i'))"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PHP",
+    "items": [
+      {
+        "title": "PHP Command Example",
+        "sections": [
+          {
+            "description": "Show current directory",
+            "code": "pwd"
+          },
+          {
+            "description": "List all files and directories",
+            "code": "ls -la"
+          }
+        ]
+      }
+    ]
+  }
+]

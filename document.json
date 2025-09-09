@@ -9,7 +9,7 @@
         "sections": [
           {
             "description": "<b style='color:#179caf;;'>Step 1:</b> Open app level <mark>build.gradle.kts</mark>file . then write this code in <mark>defaultConfig</mark> function",
-            "code": "//Print the resolved minSdkVersion for debugging\nprintln('Resolved minSdkVersion = $minSdk')"
+            "code": "//Print the resolved minSdkVersion for debugging\nprintln(\"Resolved minSdkVersion = $minSdk\")"
           },
           {
             "description": "<b style='color:#179caf;;'>Step 2:</b> Open Flutter Projects Android Folder with cmd : Example : ",

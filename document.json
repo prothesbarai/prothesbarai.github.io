@@ -62,18 +62,18 @@
       }
     ]
   },{
-    "name": "XML",
+    "name": "File Extention .bat",
     "items": [
       {
-        "title": "PHP Command Example",
+        "title": "Open web-browser multi-sites in One Click",
         "sections": [
           {
-            "description": "Show current directory",
-            "code": "pwd"
+            "description": ".bat ফাইল দিয়ে তুমি একসাথে একাধিক ওয়েবসাইট বা লিঙ্ক খুলতে পারো। এটি খুব সহজ \n1. Notepad খুলো। \n2. নিচের মতো কোড লিখো:",
+            "code": "@echo off\nstart \"\" \"https://www.google.com\"\nstart \"\" \"https://www.facebook.com\"\nstart \"\" \"https://www.youtube.com\"\nstart \"\" \"https://www.twitter.com\"\npause"
           },
           {
-            "description": "List all files and directories",
-            "code": "ls -la"
+            "description": "মনে রাখবে: start \"\" \"link\" এই ফরম্যাট ব্যবহার করতে হবে \n File name: OpenLinks.bat (নিশ্চিত করো .txt নয়)",
+            "code": ""
           }
         ]
       }

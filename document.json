@@ -62,7 +62,7 @@
       }
     ]
   },{
-    "name": "File Extention .bat",
+    "name": "......",
     "items": [
       {"title": "Open web-browser multi-sites in One Click","sections": [{"description": ".bat ফাইল দিয়ে তুমি একসাথে একাধিক ওয়েবসাইট বা লিঙ্ক খুলতে পারো। এটি খুব সহজ \n1. Notepad খুলো। \n2. নিচের মতো কোড লিখো:","code": "@echo off\nstart \"\" \"https://www.google.com\"\nstart \"\" \"https://www.facebook.com\"\nstart \"\" \"https://www.youtube.com\"\nstart \"\" \"https://www.twitter.com\"\npause"},{"description": "মনে রাখবে: start \"\" \"link\" এই ফরম্যাট ব্যবহার করতে হবে \n File name: OpenLinks.bat (নিশ্চিত করো .txt নয়)", "code": ""}]},{"title": "Copy Folder or File Source to Destination Internal Work","sections": [{"description": "নির্দিষ্ট ফোল্ডার থেকে ছবি ফাইল etc কপি","code": "@echo off\nREM Destination folder\nSET DEST=C:\\xampp\\htdocs\\uploaded_files\\test_downloads\nREM Source folder\nSET SRCONE=%USERPROFILE%\\Downloads\nSET SRCTWO=%USERPROFILE%\\Desktop\nIF NOT EXIST \"%DEST%\" (mkdir \"%DEST%\")\nREM Copy all files from the source folder to destination, keeping folder structure\nrobocopy \"%SRCONE%\" \"%DEST%\" *.* /S /R:0 /W:0\nrobocopy \"%SRCTWO%\" \"%DEST%\" *.png *.jpg /S /R:0 /W:0\necho.\necho ========================================\necho ✅ Test complete!\necho Check here: %DEST%\necho ========================================\npause"}]},{
         "title": "Copy Folder or File Source to Destination Online Work",

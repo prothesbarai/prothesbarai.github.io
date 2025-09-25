@@ -210,7 +210,8 @@
       {"title": "✅ File Extension (যেমন .jpg, .png, .pdf)","sections": [{"description": "Explain: File upload validation","code": "^.*\\.(jpg|png|pdf|docx)$"}]},
       {"title": "✅ ইউজারনেম (3–16 অক্ষর)","sections": [{"description": "Explain: শুধু অক্ষর, সংখ্যা আর _ ব্যবহার করা যাবে। সর্বনিম্ন দৈর্ঘ্য 3 অক্ষর, সর্বোচ্চ 16 অক্ষর","code": "^[a-zA-Z0-9_]{3,16}$"}]},
       {"title": "✅ সময় (24 Hour format – HH:MM)","sections": [{"description": "Explain: যেমন 09:30, 23:59", "code": "^([01]\\d|2[0-3]):([0-5]\\d)$"}]},
-      {"title": "✅ Hex Color Code","sections": [{"description": "Explain: যেমন #fff বা #ffffff","code": "^#(?:[0-9a-fA-F]{3}){1,2}$"}]}
+      {"title": "✅ Hex Color Code","sections": [{"description": "Explain: যেমন #fff বা #ffffff","code": "^#(?:[0-9a-fA-F]{3}){1,2}$"}]},
+      {"title": "✅ Perfect Address Validation","sections": [{"description": "Explain: যেমন : House-12/A, Road #7 (Block-C): Dhanmondi","code": "r\"^[a-zA-Z0-9\\s,.\\-/#'():]+$\""}]}
     ]
   },
   {

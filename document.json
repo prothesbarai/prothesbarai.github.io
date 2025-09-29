@@ -185,7 +185,7 @@
             "code": ""
           },
           {"description": "<h2>Flutter Side>></h2><b>Step 1: </b> Firstly Create two Dart File Ragistration Dart File And Login Dart File.<br><b>Step 2: </b>After this two Dart File and there write Email Field and Password Field and Button etc with dart code, If you store another info from user you must create their field in Registration Page,","code": ""},
-          {"description": "<b>Registration Page Button Action : for Register User in Firebase Auth</b>","code": "await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);"},
+          {"description": "<b>Registration Page Button Action : for Register User in Firebase Auth</b>","code": "UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);"},{"description": "<b>Login Page Button Action : for Login User in Firebase Auth</b>","code": "UserCredential credential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);"},{"description": "<b>Forget Page Button Action : for Forget Password User in Firebase Auth</b> : And Check Your Spam Mail Folder . But When Register Domain Add Then you Get mail in inbox","code": "await FirebaseAuth.instance.sendPasswordResetEmail(email: email);"},
           
           
           {"description": "<h5>IF you show demo ( My Github Projects ) Click this link and search : >>> <mark><a href=\"https://github.com/prothesbarai/email_auth_with_firebase\" target=\"_blank\">Show email auth with firebase</a></h5></mark>","code": ""}

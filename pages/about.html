@@ -41,6 +41,12 @@
             color: #0bceaf;
             text-decoration: none;
         }
+
+        /* For Gallery */
+        .card a.btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
     </style>
 
 </head>
@@ -324,9 +330,6 @@
             </div>
         </div>
 
-
-
-
         <div class="container" > <!--id="ProtectedDiv"-->
 
             <div class="row" data-aos="fade-down" data-aos-duration="1000">
@@ -438,12 +441,47 @@
 
 
 
+        <!-- Family Photo Gallery Start Here -->
+         <div class="container-fluid py-4">
+            <div class="container">
+                <div class="position-relative d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">PG</h1>
+                    <h1 class="position-absolute text-uppercase text-primary"><u>Photo Gallery</u></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" data-aos="fade-down" data-aos-duration="1000">
+                <div class="col-md-12">
+                    <p class="text-center py-3">
+                        Welcome to our exclusive Photo Gallery! 📸 Explore timeless moments and stunning captures that celebrate creativity, joy, and unforgettable experiences. ✨ Each image tells a unique story, inviting you to relive the magic through every frame. 🌟
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gallery Card -->
+            <div class="card border-0 shadow-lg rounded-4 text-center p-4 mx-auto" style="max-width: 400px; background: linear-gradient(135deg, #0bceaf 0%, #2575fc 100%);">
+                <div class="card-body">
+                    <i class="bi bi-images display-4 text-white mb-3"></i>
+                    <h5 class="card-title text-white mb-3">Visit Our Photo Gallery</h5>
+                    <p class="card-text text-white-50 mb-4">
+                        Explore stunning captures and timeless moments ✨. Click below to experience the magic 📸.
+                    </p>
+                    <!-- This Button Lock / Protected -->
+                    <a href="#" class="btn btn-light btn-lg fw-bold shadow-sm" style="transition: transform 0.3s;" id="ProtectedDiv">
+                        Open Gallery <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Family Photo Gallery End Here -->
 
 
-        
 
 
-        <!-- Locked Family Section Start Here
+    
+        <!-- Locked Gallery Section Button Start Here -->
         <div class="container" id="lockerSection">
             <div class="row" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="col-sm-4"></div>
@@ -462,7 +500,9 @@
                 <div class="col-sm-4"></div>
             </div>
         </div>
-        Locked Family Section End Here -->
+        <!-- Locked Gallery Section Button End Here -->
+
+
 
 
     <!-- Footer Start -->
@@ -550,6 +590,19 @@
         })
     </script>
     <!-- Family Carousel Sections End Here -->
+
+
+    <!-- Photo Gallery Link Encripted Start Here-->
+    <script>
+        document.getElementById('ProtectedDiv').addEventListener('click', function() {
+        const pwd = prompt('Enter access code:');
+        if (pwd !== 'Asp') { alert('Wrong'); return; }
+        const encoded = 'aHR0cHM6Ly9wcm90aGVzYmFyYWkuZ2l0aHViLmlvL3Bob3RvX2dhbGxlcnkv';
+        const url = atob(encoded);
+        window.open(url, '_blank', 'noopener');
+        });
+    </script>
+    <!-- Photo Gallery Link Encripted End Here -->
 
     <script>
         AOS.init();

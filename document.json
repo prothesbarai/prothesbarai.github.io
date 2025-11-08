@@ -94,17 +94,7 @@
     "name": "Python",
     "items": [
       {
-        "title": "PHP Command Example",
-        "sections": [
-          {
-            "description": "Show current directory",
-            "code": "pwd"
-          },
-          {
-            "description": "List all files and directories",
-            "code": "ls -la"
-          }
-        ]
+        "title": "Project-wide Logging Setup","sections": [{ "description": "Firstly Import : ", "code": "import logging"},{"description": "Then Crate a Custom Function : <br>Describe Some :<br><b>1. level=logging.INFO :</b> DEBUG → সব message দেখায় (ডেভেলপমেন্টে কাজে লাগে) & INFO → সাধারণ তথ্য  & WARNING → সতর্কবার্তা & ERROR → ত্রুটি & CRITICAL → খুব গুরুতর ত্রুটি<br><b>2. filemode='w' / 'a' :</b> 'a' → Append mode   &    'w' → Write mode(First Clear Then New Log ADD)", "code": "def set_custom_log_info(filename): \n\tlogging.basicConfig(level=logging.INFO, filename=filename, format='%(asctime)s %(message)s', filemode='w')" }, {"description": "Now Create Second Function : ", "code": "def report(e: Exception): \n\tlogging.exception(str(e))" }]
       }
     ]
   },

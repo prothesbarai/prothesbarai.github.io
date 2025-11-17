@@ -187,6 +187,42 @@
           {"description": "<h2>Flutter Side>></h2><b>Step 1: </b> Firstly Create two Dart File Ragistration Dart File And Login Dart File.<br><b>Step 2: </b>After this two Dart File and there write Email Field and Password Field and Button etc with dart code, If you store another info from user you must create their field in Registration Page,","code": ""},
           {"description": "<b>Registration Page Button Action : for Register User in Firebase Auth</b>","code": "UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);"},{"description": "<b>Login Page Button Action : for Login User in Firebase Auth</b>","code": "UserCredential credential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);"},{"description": "<b>Forget Page Button Action : for Forget Password User in Firebase Auth</b> : And Check Your Spam Mail Folder . But When Register Domain Add Then you Get mail in inbox","code": "await FirebaseAuth.instance.sendPasswordResetEmail(email: email);"},{"description": "<hr><center><h3>Firebase Extra Data Store</h3></center><hr><b>If you Same Time Firebase store Extra ডাটা : So Follow : Firestore Database তৈরি করা :</b> <br><b>Step 1: </b> Open Your Firebase Console and Select Your Projects then Firestore Database → Create database</b> <br><b>Step 2: </b> Select edition → Standard edition → Click Next Button [Note If You Click Enterprise edition Skip Step 3 & 4, But Here Problem cause its Paid work, So ignore it]<br><b>Step 3: </b> Database ID and location → Click Next Button<br><b>Step 4: </b> Configure → Start in Production mode (development এর জন্য test mode use, but basically Production mode used in Test Purpose) → Click Create Button <br><b>Step 5: </b>+ Add collection এ ক্লিক করো  → Collection ID দাও: users → click Next Button → then Document Id (Document ID auto দিতে পারো (random) অথবা custom (যেমন: uid)) <br>then Fields দাও: <br><br>name → string → \"Prothes Barai\"<br>phone → string → \"01317818826\"<br>email → string → \"prothes19@gmail.com\"<br>createdAt → timestamp → current time<br><br>Now Code Here","code": "UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);<br>/// >>> Step 2: Get user UID For Saved Extra Data Every Users<br>String uid = credential.user!.uid;<br>await FirebaseFirestore.instance.collection(\"users\").doc(uid).set({\"name\": name, \"phone\": phnNumber, \"email\": email, \"createdAt\": FieldValue.serverTimestamp(),});"},{"description": "<hr><center><h3>Firebase Extra Data Show Based On Specifiq User Id</h3></center><hr><b> রেজিস্ট্রেশন করার সময় users কালেকশনে uid দিয়ে ডকুমেন্ট Create এখন লগইন করার পর সেই লগইনকৃত ইউজারের uid দিয়ে Firestore থেকে ডেটা নিয়ে HomePage-এ শো করাতে হবে","code": "final String uid = FirebaseAuth.instance.currentUser!.uid;<br><br>return Scaffold(<br>  appBar: AppBar(title: Text(\"Home Page\")),<br>  body: FutureBuilder<DocumentSnapshot>(<br>    future: FirebaseFirestore.instance.collection(\"users\").doc(uid).get(),<br>    builder: (context, snapshot) {<br>      if (snapshot.connectionState == ConnectionState.waiting) {<br>        return const Center(child: CircularProgressIndicator());<br>      }<br>      if (snapshot.hasError) {<br>        return const Center(child: Text(\"Something went wrong\"));<br>      }<br>      if (!snapshot.hasData || !snapshot.data!.exists) {<br>        return const Center(child: Text(\"User data not found\"));<br>      }<br><br>      var userData = snapshot.data!.data() as Map<String, dynamic>;<br><br>      return Center(<br>        child: Column(<br>          mainAxisAlignment: MainAxisAlignment.center,<br>          children: [<br>            Text(\"Welcome, ${userData['name'] ?? ''}\", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),<br>            const SizedBox(height: 10),<br>            Text(\"Email: ${userData['email'] ?? ''}\", style: const TextStyle(fontSize: 18)),<br>            const SizedBox(height: 10),<br>            Text(\"Phone: ${userData['phone'] ?? ''}\", style: const TextStyle(fontSize: 18)),<br>          ],<br>        ),<br>      );<br>    },<br>  ),<br>);"},{"description": "<h5>IF you show demo ( My Github Projects ) Click this link and search : >>> <mark><a href=\"https://github.com/prothesbarai/email_auth_with_firebase\" target=\"_blank\">Show email auth with firebase</a></h5></mark>","code": ""}
         ]
+      },{
+        "title": "Custom Forgot Password Set In App",
+        "sections": [
+          {
+            "description": "<b>Note : </b><br>ইমেইল দিয়ে OTP পাঠানো এবং অ্যাপেই নতুন পাসওয়ার্ড সেট করা - Firebase এর sendPasswordResetEmail() এর ডিফল্ট ফাংশন সেটা করে না। কারণ Firebase ডিফল্টভাবে email link-based reset দেয় .. <br>👉 Firebase নিজে ইমেইলে OTP পাঠায় না।<br>👉 OTP system custom ভাবে বানাতে হবে Cloud Function দিয়ে।<br>✅ PART–1: Cloud Function (OTP Send + OTP Verify + Password Reset) <br> Firebase Functions Setup (একবারই করতে হবে) <br> So Firstly Open your cmd then Terminal এ লিখো: <br>",
+            "code": "npm install -g firebase-tools"
+          },
+          {
+            "description": "Then",
+            "code": "firebase login"
+          },
+          {
+            "description": "If Existing Login you want logout",
+            "code": "firebase logout"
+          },
+          {
+            "description": "If Existing Login you can change browser",
+            "code": "firebase login --reauth"
+          },
+          {
+            "description": "Now Create a Folder any path : <br> Example : C:\\Users\\Prothes\\Desktop\\firebase_backend",
+            "code": ""
+          },
+          {
+            "description": "Then Open This Folder and in this folder open cmd. Then Finally Run : ",
+            "code": "firebase init functions"
+          },
+          {
+            "description": "Then Select <br><mark>👉Using Existing Projects</mark> <br>And After Select <br><mark>👉Your Project</mark><br>And After Select Language <br><mark>👉Java-Script</mark><br>Then type<br><mark>👉y</mark><br>Again type<br><mark>👉y</mark> <br> <br>Firebase Cloud Functions পুরোপুরি Ready!",
+            "code": ""
+          },
+          {
+            "description": "Now Open > C:\\Users\\Prothes\\Desktop\\firebase_backend  Folder and find <mark>functions/index.js</mark>",
+            "code": ""
+          }
+        ]
       }
     ]
   },

@@ -192,7 +192,7 @@
         "title": "Login Continue With Google",
         "sections": [
           {
-            "description": "<h5>Step 1 : </h5> Firstly Need SHA-1 or SHA-256 for Android.  So we can find SHA-1 or SHA-256 follow the instraction : <br> Goto your flutter projects folder and open android folder <br> example : <b>C:\\Users\\Prothes\\Desktop\\task_tracker\\android</b><br> Now Open cmd and run command this : >> And Find SHA-1 or SHA-256 ... <br>Command Here :",
+            "description": "<h5>Step 1 : (*Need First)</h5> Firstly Need SHA-1 or SHA-256 for Android.  So we can find SHA-1 or SHA-256 follow the instraction : <br> Goto your flutter projects folder and open android folder <br> example : <b>C:\\Users\\Prothes\\Desktop\\task_tracker\\android</b><br> Now Open cmd and run command this : >> And Find SHA-1 or SHA-256 ... <br>Command Here :",
             "code": ".\\gradlew.bat signingReport"
           },
           {
@@ -204,15 +204,19 @@
             "code": "google_sign_in: ^7.2.0"
           },
           {
-            "description": "<h5>Step 3 (Get Client Id): </h5> Open <mark>https://console.cloud.google.com/apis/credentials</mark> This link and OAuth 2.0 Client তৈরি করুন <br><br>Credentials → Create Credentials → OAuth client ID (Select) ক্লিক করুন। <br><mark>(if Warning → To create an OAuth client ID, you must first configure your consent screen )Click →  Configure consent screen Button => then click  → Get Started then fillup field - App Name & Select Email then click next button → Then Select External radio button and click next → then filup Contact Information Email & click next button → Check Agree button → Click Continue The click → Create Button</mark>",
+            "description": "<h5>Step 3 (Get Client Id For Web): </h5> Open <mark>https://console.cloud.google.com/apis/credentials</mark> This link and OAuth 2.0 Client তৈরি করুন <br><br>Credentials → Create Credentials → OAuth client ID (Select) ক্লিক করুন। <br><mark>(if Warning → To create an OAuth client ID, you must first configure your consent screen )Click →  Configure consent screen Button => then click  → Get Started then fillup field - App Name & Select Email then click next button → Then Select External radio button and click next → then filup Contact Information Email & click next button → Check Agree button → Click Continue The click → Create Button</mark>",
             "code": ""
           },
           {
-            "description": "<h5>Step 4 (Get Client Id) : </h5> Now Again Open <mark>https://console.cloud.google.com/apis/credentials</mark>👉Credentials → Create Credentials → Select OAuth client ID <br>👉Application type হিসেবে নির্বাচন করুন: => Flutter Web এর জন্য: Web application <b>Or</b> Flutter Android/iOS এর জন্য: Android বা iOS <br>👉Name দিন (যেমন: My Flutter Android/Web/ios Client)<br>👉Fillup Field App Package Name <br>👉Then Filup SHA-1 Key<br>👉 Then Verify App Ownership(optional)<br>👉 Then Check Enable custom URI scheme <br>👉Then Click Create Button 👉 And Finally Show Clint Id , Copy this and download json file But Clint Secret maybe firstly web setup then get....<br><br> Repeat Step 4 For Web ios etc purpose",
+            "description": "<h5>Step 4 (Get Client Id For Web) : </h5> Now Again Open <mark>https://console.cloud.google.com/apis/credentials</mark>👉Credentials → Create Credentials → Select OAuth client ID <br>👉Application type হিসেবে নির্বাচন করুন: => Flutter Web এর জন্য: Web application <b>Or</b> Flutter Android/iOS এর জন্য: Android বা iOS <br>👉Name দিন (যেমন: My Flutter Android/Web/ios Client)<br>👉Fillup Field App Package Name <br>👉Then Filup SHA-1 Key<br>👉 Then Verify App Ownership(optional)<br>👉 Then Check Enable custom URI scheme <br>👉Then Click Create Button 👉 And Finally Show Clint Id , Copy this and download json file But Clint Secret maybe firstly web setup then get....<br><br> Repeat Step 4 For Web ios etc purpose <br><br><mark>(Ignore Step 3 & Step 4)</mark> <br><br>",
             "code": ""
           },
           {
-            "description": "<h5>Step 5 (Firebase Side)<mark>(Ignore Step 3 & Step 4)</mark> : </h5>👉Open Firebase Console<br>👉Select your projects<br>👉Click settings Icon => Click Project settings <br>👉Select Android apps<br>👉Click Add Fingure Print button<br>👉Paste SHA-1 (Get from Step-1)<br>👉Then Save Button Click.<br>👉Now Build Options in => Click Authentication Option<br>👉Goto Sign-in-method<br>👉Click Add new Provider<br>👉Additional providers => Select Google<br>👉Select Firebase Console Email<br>👉Then Click Save Button <br><mark>Note : </mark>Web SDK configuration setup only web application purpose",
+            "description": "<h5>Step 5 (Firebase Side): </h5>👉Open Firebase Console<br>👉Select your projects<br>👉Click settings Icon => Click Project settings <br>👉Select Android apps<br>👉Click Add Fingure Print button<br>👉Paste 1st-ly SHA-1 and 2nd-ly SHA-256 (Get from Step-1)<br>👉Then Save Button Click.<br>👉Now Build Options in => Click Authentication Option<br>👉Goto Sign-in-method<br>👉Click Add new Provider<br>👉Additional providers => Select Google<br>👉Select Firebase Console Email<br>👉Then Click Save Button <br><mark>Note : </mark>Web SDK configuration setup only web application purpose <h4>After Setup Firebase Again Download <mark>GoogleService-Info.plist</mark> & <mark>google-services.json</mark>File and again Replace File and In this file you Get <mark>Client ID</mark></h4> ",
+            "code": "" 
+          },
+          {
+            "description": "<h5>Step 6 (Flutter Side) : </h5>",
             "code": "" 
           }
         ]

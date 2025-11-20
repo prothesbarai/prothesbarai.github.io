@@ -201,7 +201,7 @@
           },
           {
             "description": "<h5>Step 2 : </h5> Open your <mark>pubspec.yaml</mark> File And , Install this package : ",
-            "code": "google_sign_in: ^7.2.0"
+            "code": "google_sign_in_all_platforms: ^2.0.2"
           },
           {
             "description": "<h5>Step 3 (Get Client Id For Web): </h5> Open <mark>https://console.cloud.google.com/apis/credentials</mark> This link and OAuth 2.0 Client তৈরি করুন <br><br>Credentials → Create Credentials → OAuth client ID (Select) ক্লিক করুন। <br><mark>(if Warning → To create an OAuth client ID, you must first configure your consent screen )Click →  Configure consent screen Button => then click  → Get Started then fillup field - App Name & Select Email then click next button → Then Select External radio button and click next → then filup Contact Information Email & click next button → Check Agree button → Click Continue The click → Create Button</mark>",
@@ -217,7 +217,7 @@
           },
           {
             "description": "<h5>Step 6 (Flutter Side) : </h5>",
-            "code": "" 
+            "code": "import 'package:flutter/cupertino.dart';\nimport 'package:google_sign_in_all_platforms/google_sign_in_all_platforms.dart';\nimport 'package:firebase_auth/firebase_auth.dart';\n\nclass GoogleLoginService {\n  final _googleSignIn = GoogleSignIn(\n    params: const GoogleSignInParams(\n      clientId: 'YOUR_CLIENT_ID.apps.googleusercontent.com',\n      clientSecret: 'YOUR_CLIENT_SECRET',\n      scopes: ['openid', 'email', 'profile'],\n    ),\n  );\n\n  Future<UserCredential?> signInWithGoogleFirebase() async {\n    try {\n      /// >>> Get Google SignIn credential\n      final GoogleSignInCredentials? creds = await _googleSignIn.signIn();\n      if (creds == null) {\n        /// >>> User SignIn Close or Failed\n        return null;\n      }\n      /// >>> Get idToken or accessToken\n      final idToken = creds.idToken;\n      final accessToken = creds.accessToken;\n\n      if (idToken == null) {\n        throw Exception(\"Google ID Token is null\");\n      }\n\n      /// >>> Create Firebase OAuthCredential\n      final oauthCredential = GoogleAuthProvider.credential(idToken: idToken, accessToken: accessToken);\n\n      /// >>> Sign-In Firebase\n      final userCredential = await FirebaseAuth.instance.signInWithCredential(oauthCredential);\n      return userCredential;\n    } catch (e) {\n      debugPrint(\"Error in Google Sign-In: $e\");\n      rethrow;\n    }\n  }\n\n  Future<void> signOut() async {\n    await _googleSignIn.signOut();\n    await FirebaseAuth.instance.signOut();\n  }\n}"
           }
         ]
       }

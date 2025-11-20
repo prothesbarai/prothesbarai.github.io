@@ -212,7 +212,7 @@
             "code": ""
           },
           {
-            "description": "<h5>Step 5 (Firebase Side): </h5>👉Open Firebase Console<br>👉Select your projects<br>👉Click settings Icon => Click Project settings <br>👉Select Android apps<br>👉Click Add Fingure Print button<br>👉Paste 1st-ly SHA-1 and 2nd-ly SHA-256 (Get from Step-1)<br>👉Then Save Button Click.<br>👉Now Build Options in => Click Authentication Option<br>👉Goto Sign-in-method<br>👉Click Add new Provider<br>👉Additional providers => Select Google<br>👉Select Firebase Console Email<br>👉Then Click Save Button <br><mark>Note : </mark>Web SDK configuration setup only web application purpose <h4>After Setup Firebase Again Download <mark>GoogleService-Info.plist</mark> & <mark>google-services.json</mark>File and again Replace File and In this file you Get <mark>Client ID</mark></h4> ",
+            "description": "<h5>Step 5 (Firebase Side): </h5>👉Open Firebase Console<br>👉Select your projects<br>👉Click settings Icon => Click Project settings <br>👉Select Android apps<br>👉Click Add Fingure Print button<br>👉Paste 1st-ly SHA-1 and 2nd-ly SHA-256 (Get from Step-1)<br>👉Then Save Button Click.<br>👉Now Build Options in => Click Authentication Option<br>👉Goto Sign-in-method<br>👉Click Add new Provider<br>👉Additional providers => Select Google<br>👉Select Firebase Console Email<br>👉Then Click Save Button <br><mark>Note : </mark>Web SDK configuration setup only web application purpose <h4>After Setup Firebase Again Download Latest <mark>GoogleService-Info.plist</mark> & <mark>google-services.json</mark>File and again Replace File and In this file you Get <mark>Client ID</mark></h4> ",
             "code": "" 
           },
           {

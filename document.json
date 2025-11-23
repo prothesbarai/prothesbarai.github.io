@@ -193,6 +193,26 @@
           {
             "description": "<h5>Flutter Side : </h5><hr>Now Add This Package <mark>(pubspec.yaml file)</mark> For Realtime Database : ",
             "code": "firebase_database: ^12.1.0"
+          },
+          {
+            "description": "<b>Google/Gmail Auth ব্যবহার করে UID পাবো সেই UID ব্যবহার করে প্রতিটি ইউজারের ডাটা আলাদা রাখবো। <br> Step 1 : Firstly Create => Firebase Database Reference : </b> ",
+            "code": "final databaseRef = FirebaseDatabase.instance.ref(\"users\"); // root reference<br>final user = FirebaseAuth.instance.currentUser; // logged in user<br>final uid = user!.uid; // ব্যবহারকারীর UID"
+          },
+          {
+            "description": "<h5>Now CRUD অপারেশন (UID ব্যবহার করে)</h5><br><b>Step 1 : </b>Create / Write",
+            "code": "void addUserData() {\n  databaseRef.child(uid).set({\n    'name': user.displayName ?? \"Unknown\",\n    'email': user.email,\n    'age': 25,\n  });\n}"
+          },
+          {
+            "description": "<b>Step 2 : </b>Read / Fetch",
+            "code": "void getUserData() async {\n  DatabaseEvent event = await databaseRef.child(uid).once();\n  if (event.snapshot.exists) {\n    Map data = event.snapshot.value as Map;\n    print(\"User Data: $data\");\n  } else {\n    print(\"No data found for this user.\");\n  }\n}"
+          },
+          {
+            "description": "<b>Step 3 : </b>Update",
+            "code": "void updateUserData() {\n  databaseRef.child(uid).update({\n    'age': 26, // শুধু update করা ফিল্ড লিখবে\n  });\n}"
+          },
+          {
+            "description": "<b>Step 4 : </b>Delete",
+            "code": "void deleteUserData() {\n  databaseRef.child(uid).remove().then((_) {\n    print(\"User data deleted successfully.\");\n  });\n}"
           }
         ]
       }

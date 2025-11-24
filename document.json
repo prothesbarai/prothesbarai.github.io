@@ -183,7 +183,7 @@
         "title": "Realtime Database",
         "sections": [
           {
-            "description": "<h5>Firebase Side : </h5><hr><b>Step 1 : </b> Click Realtime Database Options<br><b>Step 2 : </b> Then Click Create Database Button<br><b>Step 3 : </b> Select Realtime Database location (Singapore (asia-southeast1)) Select this, & Click Next Button<br><b>Step 4 : </b>Then Select => Start in locked mode (Production) <mark>NB:</mark> Data private থাকে, কোনো ক্লায়েন্ট ডিফল্টে পড়তে বা লিখতে পারবে না। security rules লিখে নির্দিষ্ট ইউজার বা condition অনুযায়ী access দিতে হবে . Production: Locked mode → তারপর Firebase rules দিয়ে security সেট  =>  CLick Enable Button <br><b>Step 4 : </b> Then Click Rules Tab and set your rules",
+            "description": "<h5>Firebase Side : </h5><hr><b>Step 1 : </b> Click Realtime Database Options<br><b>Step 2 : </b> Then Click Create Database Button<br><b>Step 3 : </b> Select Realtime Database location (Default Select), & Click Next Button<br><b>Step 4 : </b>Then Select => Start in locked mode (Production) <mark>NB:</mark> Data private থাকে, কোনো ক্লায়েন্ট ডিফল্টে পড়তে বা লিখতে পারবে না। security rules লিখে নির্দিষ্ট ইউজার বা condition অনুযায়ী access দিতে হবে . Production: Locked mode → তারপর Firebase rules দিয়ে security সেট  =>  CLick Enable Button <br><b>Step 4 : </b> Then Click Rules Tab and set your rules",
             "code": "{\n  \"rules\": {\n    \"users\": {\n      \"$uid\": {\n        \".read\": \"auth != null && auth.uid == $uid\",\n        \".write\": \"auth != null && auth.uid == $uid\"\n      }\n    }\n  }\n}"
           },
           {

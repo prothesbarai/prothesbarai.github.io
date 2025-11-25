@@ -195,24 +195,36 @@
             "code": "firebase_database: ^12.1.0"
           },
           {
-            "description": "<b>Google/Gmail Auth ব্যবহার করে UID পাবো সেই UID ব্যবহার করে প্রতিটি ইউজারের ডাটা আলাদা রাখবো। <br> Step 1 : Firstly Create => Firebase Database Reference : </b> ",
-            "code": "final databaseRef = FirebaseDatabase.instance.ref(\"users\"); // root reference<br>final user = FirebaseAuth.instance.currentUser; // logged in user<br>final uid = user!.uid; // ব্যবহারকারীর UID"
+            "description": "<b>Google/Gmail Auth ব্যবহার করে UID পাবো সেই UID ব্যবহার করে প্রতিটি ইউজারের ডাটা আলাদা রাখবো। <br> Realtime Database Structure (Recommended)</b> <br><br> users<br>&nbsp;&nbsp;&nbsp;└── UID<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── tasks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── taskId<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── taskName: \"ABC\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── projectName: \"XYZ\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── createdAt: \"25 Nov 2025\"",
+            "code": ""
           },
           {
-            "description": "<h5>Now CRUD অপারেশন (UID ব্যবহার করে)</h5><br><b>Step 1 : </b>Create / Write",
-            "code": "void addUserData() {\n  databaseRef.child(uid).set({\n    'name': user.displayName ?? \"Unknown\",\n    'email': user.email,\n    'age': 25,\n  });\n}"
+            "description": "<h4>Now CRUD অপারেশন (UID ব্যবহার করে)</h4><hr><h5>Step 1 : Create / Write </h5><br>প্রথমে Firebase Auth থেকে Logged-in User-এর UID নেওয়া হচ্ছে",
+            "code": "final uid = FirebaseAuth.instance.currentUser!.uid;"
           },
           {
-            "description": "<b>Step 2 : </b>Read / Fetch",
-            "code": "void getUserData() async {\n  DatabaseEvent event = await databaseRef.child(uid).once();\n  if (event.snapshot.exists) {\n    Map data = event.snapshot.value as Map;\n    print(\"User Data: $data\");\n  } else {\n    print(\"No data found for this user.\");\n  }\n}"
+            "description": "নতুন Task ID তৈরি করা হচ্ছে (Firebase Push Key) <br>এখানে-<br>\tusers/&#36;uid/tasks → নির্দিষ্ট ইউজারের tasks নোড<br>\t.push() → Firebase একটি unique ID তৈরি করে<br>\t.key → সেই ইউনিক key-টাই taskId হিসেবে পাওয়া যাচ্ছে<br>\tএই key নতুন task-এর জন্য ID হবে।",
+            "code": "final taskId = FirebaseDatabase.instance.ref(\"users/&#36;uid/tasks\").push().key;"
           },
           {
-            "description": "<b>Step 3 : </b>Update",
-            "code": "void updateUserData() {\n  databaseRef.child(uid).update({\n    'age': 26, // শুধু update করা ফিল্ড লিখবে\n  });\n}"
+            "description": "এবার সেই taskId ব্যবহার করে task ডাটাবেজে Save করা হচ্ছে <br>এখানে:<br>\t.ref(\"users/&#36;uid/tasks/&#36;taskId\") → এই path-এ নতুন Task save হবে <br>\t.set({...}) → ডাটাবেজে ডেটা লিখে দিচ্ছে",
+            "code": "await FirebaseDatabase.instance.ref(\"users/&#36;uid/tasks/&#36;taskId\").set({ \"taskName\": taskNameController.text, \"projectName\": taskProjectNameController.text, \"createdAt\": currentDateTime,});"
           },
           {
-            "description": "<b>Step 4 : </b>Delete",
-            "code": "void deleteUserData() {\n  databaseRef.child(uid).remove().then((_) {\n    print(\"User data deleted successfully.\");\n  });\n}"
+            "description": "<hr><h5>Step 2 : Read Data </h5> <mark>Total List Of Tasks/Items Number Show :</mark> <br><br>ইউজারের UID নেয়<br>Firebase-এ তার tasks নোডকে real-time এ listen করে<br>যদি টাস্ক থাকে → task count দেখায়<br>যদি না থাকে → 0 দেখায়<br>প্রতিবার নতুন task যোগ বা delete হলেই UI auto update হয়",
+            "code": "int totalTasks = 0;\n\n@override\nvoid initState() {\n  super.initState();\n  loadUserTasks();\n}\n\nvoid loadUserTasks() {\n  final uid = FirebaseAuth.instance.currentUser!.uid;\n  FirebaseDatabase.instance.ref(\"users/$uid/tasks\").onValue.listen((event) {\n    final data = event.snapshot.value;\n    if (data == null) {\n      setState(() { totalTasks = 0; });\n      return;\n    }\n    final tasksMap = Map<String, dynamic>.from(data as Map);\n    setState(() { totalTasks = tasksMap.length; });\n  });\n}"
+          },
+          {
+            "description": "Get List items date based on specifiq user id part-1 (Write on Stateful class)",
+            "code": "/// >>> Fetch Recent Activities From Firebase ================================\nStream&lt;List&lt;Map&lt;String, dynamic&gt;&gt;&gt; getRecentActivityStream() {\n  final uid = FirebaseAuth.instance.currentUser!.uid;\n  final ref = FirebaseDatabase.instance.ref(\"users/$uid/tasks\");\n\n  return ref.onValue.map((event) {\n    final data = event.snapshot.value as Map?;\n    if (data == null) return [];\n\n    return data.entries.map((entry) {\n      final tasks = Map<String, dynamic>.from(entry.value);\n      return {\n        \"id\": entry.key,\n        \"taskName\": tasks[\"taskName\"] ?? \"\",\n        \"projectName\": tasks[\"projectName\"] ?? \"\",\n        \"createdAt\": tasks[\"createdAt\"] ?? \"\",\n        \"status\": tasks[\"status\"] ?? \"\",\n        \"isPlaying\": tasks[\"isPlaying\"] ?? false,\n      };\n    }).toList();\n  });\n}\n/// <<< Fetch Recent Activities From Firebase ================================"
+          },
+          {
+            "description": "Get List items date based on specifiq user id part-2 (Write you want to show data positions) <br><mark>Note :  Create a _recentActivityCard widget Design </mark>",
+            "code": "StreamBuilder&lt;List&lt;Map&lt;String,dynamic&gt;&gt;&gt;(\n  stream: getRecentActivityStream(),\n  builder: (context, snapshot) {\n    if (!snapshot.hasData) {\n      return const Center(child: CircularProgressIndicator());\n    }\n    if (snapshot.data!.isEmpty) {\n      return const Text(\"No Recent Activities Found\");\n    }\n    return Column(\n      children: snapshot.data!\n          .map((tasks) {\n            return _recentActivityCard(\n              taskId: tasks[\"id\"],\n              taskName: tasks[\"taskName\"],\n              createdAt: tasks[\"createdAt\"],\n              isPlaying: tasks[\"isPlaying\"],\n              status: tasks[\"status\"],\n            );\n          })\n          .toList(),\n    );\n  },\n)"
+          },
+          {
+            "description": "<hr><h5>Step 3 : Update Data </h5> <mark>How to update specifiq fileds and basic initializations</mark> ",
+            "code": "// Common Initialization And Path set\nfinal uid = FirebaseAuth.instance.currentUser!.uid;\nfinal taskRef = FirebaseDatabase.instance.ref(\"users/$uid/tasks\");\nfinal snapshot = await taskRef.get();\nfinal tasksData = snapshot.value as Map?;\nif (tasksData == null) return;\n\n// Update Specific Fields\nawait taskRef.child(taskId).update({\n  \"isPlaying\": false,\n  \"singleTaskTotalPlayHour\": newTotalSeconds.toString(),\n});"
           }
         ]
       }

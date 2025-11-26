@@ -225,6 +225,10 @@
           {
             "description": "<hr><h5>Step 3 : Update Data </h5> <mark>How to update specifiq fileds and basic initializations</mark> ",
             "code": "// Common Initialization And Path set\nfinal uid = FirebaseAuth.instance.currentUser!.uid;\nfinal taskRef = FirebaseDatabase.instance.ref(\"users/$uid/tasks\");\nfinal snapshot = await taskRef.get();\nfinal tasksData = snapshot.value as Map?;\nif (tasksData == null) return;\n\n// Update Specific Fields\nawait taskRef.child(taskId).update({\n  \"isPlaying\": false,\n  \"singleTaskTotalPlayHour\": newTotalSeconds.toString(),\n});"
+          },
+          {
+            "description": "<hr><h5>Step 4 : Delete/Remove Data </h5> <mark>How to Remove from specifiq User ids specifiq data</mark> ",
+            "code": "final uid = FirebaseAuth.instance.currentUser!.uid;\nfinal taskRef = FirebaseDatabase.instance.ref(\"users/$uid/tasks/$taskId\");\nawait taskRef.remove();"
           }
         ]
       }

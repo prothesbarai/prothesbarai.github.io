@@ -264,5 +264,23 @@
       {"title": "Existing Project Download From Github","sections": [{"description": "<b style='color:#179caf;'>🛠 Step 1:</b> Open Github > repository > click projects file name > click code button > copy HTTPS link and go to your pc folder location , where you want to keep. then here this location open your cmd / Command Prompt , and type this command : ","code": "git clone copy_HTTPS_link_paste_here"}]},
       {"title": "Existing Project Upload to Github","sections": [{"description": "<b style='color:#179caf;'>🛠 Step 1:</b> Open your projects root folder > then right click and open git bash , then type this command : ","code": "git add .<br>git commit -m 'commit_name'<br>git push"}]}
     ]
+  },
+  {
+    "name": "Converters",
+    "items": [
+      {
+        "title": "Convert String IDs to List<int> in Flutter",
+        "sections": [
+          {
+            "description": "A \"[1,2,3]\" String to Convert int List [1,2,3],<br>Here : ",
+            "code": "List&lt;int&gt; parseIdsFromString(String? idString) {\n  if (idString == null || idString.isEmpty) return [];\n  try {\n    final cleanString = idString.replaceAll(RegExp(r'[\\[\\]\\s]'), '');\n    return cleanString.split(',').map((e) => int.tryParse(e) ?? 0).where((e) => e != 0).toList();\n  } catch (e) {\n    debugPrint(\"Parsing error: $e\");\n    return [];\n  }\n}"
+          },
+          {
+            "description": "<b>Describe : </b> <br>if (idString == null || idString.isEmpty) return []; <br>যদি idString empty string হয় / idString null হয় → কোনো ডাটা নেই → খালি list ফেরত দাও।<br><br>final cleanString = idString.replaceAll(RegExp(r'[\\[\\]\\s]'), '');<br>RegExp r'[\\[\\]\\s]' অর্থাৎ: [ এবং ] remove করবে and space remove করবে . অর্থাৎ মূল string কে pure comma-separated numbers আকারে convert করা।",
+            "code": ""
+          }
+        ]
+      }
+    ]
   }
 ]

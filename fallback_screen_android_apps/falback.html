@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Opening App...</title>
+
+  <script>
+    var storeUrl = "https://play.google.com/store/apps/details?id=com.deep_linking_and_navigate";
+
+    // Wait 1.5 sec then redirect to Play Store
+    setTimeout(function () { window.location.href = storeUrl;}, 1500);
+  </script>
+</head>
+
+<body style="text-align:center; font-family: Arial; margin-top:100px;">
+  <h2>Opening App...</h2>
+  <p>If the app is not installed, redirecting to Play Store...</p>
+
+  <p>
+    <a href="https://play.google.com/store/apps/details?id=com.deep_linking_and_navigate">
+      Click here if not redirected
+    </a>
+  </p>
+</body>
+</html>

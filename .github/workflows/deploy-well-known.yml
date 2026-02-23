@@ -3,19 +3,25 @@ name: Deploy .well-known
 on:
   push:
     branches:
-      - main  # যেই branch থেকে deploy করবে
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - name: Setup
+
+      - name: Prepare .well-known
         run: |
           mkdir -p .well-known
           cp well-known/assetlinks.json .well-known/assetlinks.json
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # root deploy  file er name
+          publish_dir: ./

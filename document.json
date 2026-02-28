@@ -312,6 +312,18 @@
           {
             "description": "এটা লিখো: ",
             "code": "package main\nimport \"fmt\"\nfunc main() {\n\tfmt.Println(\"Hello Prothes 🔥 Welcome to Go!\")\n}" 
+          },
+          {
+            "description": "Run করো: VS Code terminal খুলে লিখো:",
+            "code": "go run main.go" 
+          },
+          {
+            "description": "<h4>🟢 STEP 6: GOPATH Check (Optional but Good)</h4> .. VS Code terminal খুলে লিখো:",
+            "code": "go env" 
+          },
+          {
+            "description": "সব কিছু default থাকলে কিছু change করার দরকার নাই। <br> <h5>Important Folder Structure (Future)</h5>",
+            "code": "golang-practice\n│\n├── go.mod\n├── main.go" 
           }
         ]
       }

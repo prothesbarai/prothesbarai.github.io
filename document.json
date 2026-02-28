@@ -289,42 +289,10 @@
       {
         "title": "Enviroment Setup",
         "sections": [
-          {
-            "description": "<h4>🟢 STEP 1: Go Install করো :</h4> Official site এ যাও: ",
-            "code": "https://go.dev/dl/"
-          },
-          {
-            "description": "Windows installer (.msi) download করো Then Install করো (Next → Next → Finish) <br> <h6>✅ Install হয়েছে কিনা check করো</h6> Command Prompt খুলে লিখো: ",
-            "code": "go version"
-          },
-          {
-            "description": "Output এরকম হলে OK: <mark>go version go1.22.x windows/amd64</mark> <h4>🟢 STEP 2: VS Code Setup : </h4> 1. Extensions এ যাও <br> 2. Search করো: Go <br> Install official extension by Google <h4>🟢 STEP 3: Workspace তৈরি :  </h4> Desktop এ একটা folder বানাও:",
-            "code": "golang-practice" 
-          },
-          {
-            "description": "তারপর VS Code দিয়ে open করো। <h4>🟢 STEP 4: Go Module Init করো : </h4> VS Code terminal খুলে লিখো:",
-            "code": "go mod init golang-practice" 
-          },
-          {
-            "description": "এতে go.mod file তৈরি হবে। <h4>🟢 STEP 5: First Program লিখি : </h4> একটা file বানাও:",
-            "code": "main.go" 
-          },
-          {
-            "description": "এটা লিখো: ",
-            "code": "package main\nimport \"fmt\"\nfunc main() {\n\tfmt.Println(\"Hello Prothes 🔥 Welcome to Go!\")\n}" 
-          },
-          {
-            "description": "Code Explain : 🔹 1️⃣ package main<br><br>👉 package মানে হলো একটা গ্রুপ বা ফাইলের পরিচয়।<br><br>Go-তে সব কোড কোনো না কোনো package-এর ভিতরে থাকতে হয়।<br><br>🔹 main হলো স্পেশাল প্যাকেজ।<br>যখন তুমি প্রোগ্রাম রান করবে, Go প্রথমে main package খুঁজবে।<br><br>📌 সহজ করে বললে:<br><br>package main মানে — এই ফাইলটাই হলো প্রোগ্রাম চালু হওয়ার মূল জায়গা।<br><br>🔹 2️⃣ import \"fmt\"<br><br>👉 import মানে বাইরে থেকে কিছু নিয়ে আসা।<br><br>fmt হলো Go-এর একটা built-in package।<br><br>📌 fmt দিয়ে আমরা:<br><br>Print করতে পারি<br><br>Format করতে পারি<br><br>Output দেখাতে পারি<br><br>👉 fmt মানে \"format\"<br><br>যদি তুমি fmt import না করো, তাহলে Println() ব্যবহার করতে পারবে না।<br><br>🔹 3️⃣ func main()<br><br>👉 func মানে function (ফাংশন)<br><br>ফাংশন মানে এমন একটা ব্লক যেখানে কাজ লেখা থাকে।<br><br>🔹 main() হলো special function<br>প্রোগ্রাম শুরু হলে Go প্রথমে এই main() ফাংশন রান করে।<br><br>📌 মানে:<br><br>Program start → main() → ভেতরের সব কোড রান<br><br>🔹 4️⃣ { }<br><br>এই curly braces এর ভিতরে যা থাকবে সেটাই function-এর কাজ।<br><br>🔹 5️⃣ fmt.Println()<br><br>এটা খুব গুরুত্বপূর্ণ 👇<br><br>🔹 fmt → যে package আমরা import করেছি<br>🔹 Println → Print Line<br><br>📌 কাজ:<br>স্ক্রিনে কিছু দেখানো। <br><br>Run করো: VS Code terminal খুলে লিখো:",
-            "code": "go run main.go" 
-          },
-          {
-            "description": "<h4>🟢 STEP 6: GOPATH Check (Optional but Good)</h4> .. VS Code terminal খুলে লিখো:",
-            "code": "go env" 
-          },
-          {
-            "description": "সব কিছু default থাকলে কিছু change করার দরকার নাই। <br> <h5>Important Folder Structure (Future)</h5>",
-            "code": "golang-practice\n│\n├── go.mod\n├── main.go" 
-          }
+          {"description": "<h4>🟢 STEP 1: Go Install করো :</h4> Official site এ যাও: ","code": "https://go.dev/dl/"},{ "description": "Windows installer (.msi) download করো Then Install করো (Next → Next → Finish) <br> <h6>✅ Install হয়েছে কিনা check করো</h6> Command Prompt খুলে লিখো: ","code": "go version"},{
+            "description": "Output এরকম হলে OK: <mark>go version go1.22.x windows/amd64</mark> <h4>🟢 STEP 2: VS Code Setup : </h4> 1. Extensions এ যাও <br> 2. Search করো: Go <br> Install official extension by Google <h4>🟢 STEP 3: Workspace তৈরি :  </h4> Desktop এ একটা folder বানাও:","code": "golang-practice"},{
+            "description": "তারপর VS Code দিয়ে open করো। <h4>🟢 STEP 4: Go Module Init করো : </h4> VS Code terminal খুলে লিখো:", "code": "go mod init golang-practice"  },{ "description": "এতে go.mod file তৈরি হবে। <h4>🟢 STEP 5: First Program লিখি : </h4> একটা file বানাও:","code": "main.go" },{
+            "description": "এটা লিখো: ", "code": "package main\nimport \"fmt\"\nfunc main() {\n\tfmt.Println(\"Hello Prothes 🔥 Welcome to Go!\")\n}" }, { "description": "Code Explain : 🔹 1️⃣ package main<br><br>👉 package মানে হলো একটা গ্রুপ বা ফাইলের পরিচয়।<br><br>Go-তে সব কোড কোনো না কোনো package-এর ভিতরে থাকতে হয়।<br><br>🔹 main হলো স্পেশাল প্যাকেজ।<br>যখন তুমি প্রোগ্রাম রান করবে, Go প্রথমে main package খুঁজবে।<br><br>📌 সহজ করে বললে:<br><br>package main মানে — এই ফাইলটাই হলো প্রোগ্রাম চালু হওয়ার মূল জায়গা।<br><br>🔹 2️⃣ import \"fmt\"<br><br>👉 import মানে বাইরে থেকে কিছু নিয়ে আসা।<br><br>fmt হলো Go-এর একটা built-in package।<br><br>📌 fmt দিয়ে আমরা:<br><br>Print করতে পারি<br><br>Format করতে পারি<br><br>Output দেখাতে পারি<br><br>👉 fmt মানে \"format\"<br><br>যদি তুমি fmt import না করো, তাহলে Println() ব্যবহার করতে পারবে না।<br><br>🔹 3️⃣ func main()<br><br>👉 func মানে function (ফাংশন)<br><br>ফাংশন মানে এমন একটা ব্লক যেখানে কাজ লেখা থাকে।<br><br>🔹 main() হলো special function<br>প্রোগ্রাম শুরু হলে Go প্রথমে এই main() ফাংশন রান করে।<br><br>📌 মানে:<br><br>Program start → main() → ভেতরের সব কোড রান<br><br>🔹 4️⃣ { }<br><br>এই curly braces এর ভিতরে যা থাকবে সেটাই function-এর কাজ।<br><br>🔹 5️⃣ fmt.Println()<br><br>এটা খুব গুরুত্বপূর্ণ 👇<br><br>🔹 fmt → যে package আমরা import করেছি<br>🔹 Println → Print Line<br><br>📌 কাজ:<br>স্ক্রিনে কিছু দেখানো। <br><br>Run করো: VS Code terminal খুলে লিখো:","code": "go run main.go" },{"description": "<h4>🟢 STEP 6: GOPATH Check (Optional but Good)</h4> .. VS Code terminal খুলে লিখো:","code": "go env" },{"description": "সব কিছু default থাকলে কিছু change করার দরকার নাই। <br> <h5>Important Folder Structure (Future)</h5>","code": "golang-practice\n│\n├── go.mod\n├── main.go"}
         ]
       }
     ]

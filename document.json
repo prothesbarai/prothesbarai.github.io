@@ -282,5 +282,38 @@
         ]
       }
     ]
+  },  {
+    "name": "GoLang",
+    "items": [
+      {
+        "title": "Enviroment Setup",
+        "sections": [
+          {
+            "description": "<h4>🟢 STEP 1: Go Install করো :</h4> Official site এ যাও: ",
+            "code": "https://go.dev/dl/"
+          },
+          {
+            "description": "Windows installer (.msi) download করো Then Install করো (Next → Next → Finish) <br> <h5>✅ Install হয়েছে কিনা check করো</h5> Command Prompt খুলে লিখো: ",
+            "code": "go version"
+          },
+          {
+            "description": "Output এরকম হলে OK: <mark>go version go1.22.x windows/amd64</mark> <h4>🟢 STEP 2: VS Code Setup : </h4> 1. Extensions এ যাও <br> 2. Search করো: Go <br> Install official extension by Google <h4>🟢 STEP 3: Workspace তৈরি :  </h4> Desktop এ একটা folder বানাও:",
+            "code": "golang-practice" 
+          },
+          {
+            "description": "তারপর VS Code দিয়ে open করো। <h4>🟢 STEP 4: Go Module Init করো : </h4> VS Code terminal খুলে লিখো:",
+            "code": "go mod init golang-practice" 
+          },
+          {
+            "description": "এতে go.mod file তৈরি হবে। <h4>🟢 STEP 5: First Program লিখি : </h4> একটা file বানাও:",
+            "code": "main.go" 
+          },
+          {
+            "description": "এটা লিখো: ",
+            "code": "package main\nimport \"fmt\"\nfunc main() {\n\tfmt.Println(\"Hello Prothes 🔥 Welcome to Go!\")\n}" 
+          }
+        ]
+      }
+    ]
   }
 ]

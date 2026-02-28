@@ -282,7 +282,8 @@
         ]
       }
     ]
-  },  {
+  },
+  {
     "name": "GoLang",
     "items": [
       {
@@ -293,7 +294,7 @@
             "code": "https://go.dev/dl/"
           },
           {
-            "description": "Windows installer (.msi) download করো Then Install করো (Next → Next → Finish) <br> <h5>✅ Install হয়েছে কিনা check করো</h5> Command Prompt খুলে লিখো: ",
+            "description": "Windows installer (.msi) download করো Then Install করো (Next → Next → Finish) <br> <h6>✅ Install হয়েছে কিনা check করো</h6> Command Prompt খুলে লিখো: ",
             "code": "go version"
           },
           {

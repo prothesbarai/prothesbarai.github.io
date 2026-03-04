@@ -289,7 +289,8 @@
     
 
     {"title": "🟢 import অংশ Describe ", "sections": [
-      { "description": "<h5>🔸 fmt</h5>Print করার জন্য<br>Println, Print, Scan <h5>🔸 errors</h5>Custom error বানাতে",  "code": "errors.New(\"message\")" },
+      { "description": "<h5>🔸 fmt</h5>Print করার জন্য<br>Println, Print, Scan",  "code": "import (\n\t\"errors\"\n\t\"fmt\"\n\t\"strconv\"\n\t\"strings\"\n\t\"unicode\"\n)" },
+      { "description": "<h5>🔸 errors</h5>Custom error বানাতে",  "code": "errors.New(\"message\")" },
       { "description": "<h5>🔸 strconv</h5>String ↔ number convert করতে",  "code": "strconv.ParseFloat(\"12.5\", 64)" },
       { "description": "<h5>🔸 strings</h5> String check করার জন্য",  "code": "strings.ContainsRune(\"+-*/()\", ch)" },
       { "description": "<h5>🔸 unicode</h5> Character digit কিনা check করতে",  "code": "unicode.IsDigit(ch)" }

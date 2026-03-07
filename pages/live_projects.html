@@ -90,6 +90,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .project-card {
+            position: relative; 
+        }
+
+        .live-badge-top {
+            position: absolute;
+            top: 10px; 
+            border: 1px solid red;         
+            right: 10px;        
+            background-color: white; 
+            color: red;       
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+            z-index: 10;        
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
@@ -210,6 +227,8 @@
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="card project-card">
                         <img src="../img/live_projects_img/paikaree.png" class="img-fluid rounded">
+                        <!-- Live badge top-right -->
+                        <span class="badge live-badge-top"><i class="live-dot"></i> Live</span>
                         <div class="card-body">
                             <h5>Paikaree E-commerce App</h5>
                             <p>Flutter based ecommerce mobile application available on Play Store.</p>
@@ -227,6 +246,8 @@
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="card project-card">
                         <img src="../img/live_projects_img/gamingExpresspro.png" class="img-fluid rounded">
+                        <!-- Live badge top-right -->
+                        <span class="badge live-badge-top"><i class="live-dot"></i> Live</span>
                         <div class="card-body">
                             <h5>Gaming Express Pro</h5>
                             <p>WordPress ecommerce website built using Porto theme.</p>
@@ -243,6 +264,8 @@
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="card project-card">
                         <img src="../img/live_projects_img/automation.png" class="img-fluid rounded">
+                        <!-- Live badge top-right -->
+                        <span class="badge live-badge-top"><i class="live-dot"></i> Live</span>
                         <div class="card-body">
                             <h5>Automation System</h5>
                             <p>Java + Selenium automation system for web automation.</p>

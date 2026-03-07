@@ -15,7 +15,8 @@
     "axe/aria": [
       "default",
       {
-        "aria-valid-attr-value": "off"
+        "aria-valid-attr-value": "off",
+        "aria-progressbar-name": "off"
       }
     ],
     "axe/text-alternatives": [

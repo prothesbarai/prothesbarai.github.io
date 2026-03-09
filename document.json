@@ -319,8 +319,15 @@
       {
         "title": "IP and Location Tracing",
         "sections": [
-          {"description": "<h5>Step 1 : Find IP Address</h5> Open Here Two URL","code": "https://grabify.link/\nhttps://iplogger.org/"},{"description": "<mark>Work Process : </mark> <br><b>Step 1 : </b> Collect any web / video / any url/link and paste in two website links Input Boxs and Click <mark>Create Url</mark> / <mark>Create a Sortlink</mark>  Button >> <br><b>Step 2 : </b> And You Get a Short-Link and this link paste anywhreye, and this link click anyone Person then you get His IP Address.. <br>But , <br><mark>Important Note : </mark> যখন তুমি শর্টলিংক তৈরী করবে তখন উপরে grabify/iplogger এর মূল লিংক পরিবর্তন হয় সেটা তোমাকে কপি করে রাখতে হবে সুরক্ষিত জায়গা রাখতে হবে, নয়তো পরে যে Create করা Sortlink থেকে IP আসবে তা দেখতে পারবে না । আর নতুন করে তৈরী করা প্রতিটি শর্ট লিংকের জন্য নতুন নতুন grabify/iplogger এর মূল লিংক পরিবর্তন হয়<h5>Step 2 : IP Address Track</h5> Open Here URL ", "code": "https://www.ip-tracker.org/"},
+          {"description": "<h5>Step 1 : Find IP Address</h5> Open Here Two URL","code": "https://grabify.link/\nhttps://iplogger.org/"},{"description": "<mark>Work Process : </mark> <br><b>Step 1 : </b> Collect any web / video / any url/link and paste in two website links Input Boxs and Click <mark>Create Url</mark> / <mark>Create a Sortlink</mark>  Button >> <br><b>Step 2 : </b> And You Get a Short-Link and this link paste anywhreye, and this link click anyone Person then you get His IP Address.. <br>But , <br><mark>Important Note : </mark> যখন তুমি শর্টলিংক তৈরী করবে তখন উপরে grabify/iplogger এর মূল লিংক পরিবর্তন হয় সেটা তোমাকে কপি করে সুরক্ষিত জায়গা রাখতে হবে, নয়তো পরে যে Create করা Sortlink থেকে IP আসবে তা দেখতে পারবে না । আর নতুন করে তৈরী করা হলে প্রতিটি শর্ট লিংকের জন্য নতুন নতুন grabify/iplogger এর মূল লিংক পরিবর্তন হয়<br><h5>Step 2 : IP Address Track</h5> Open Here URL ", "code": "https://www.ip-tracker.org/"},
           { "description": "grabify/iplogger থেকে পাওয়া IP Copy করে ip-tracker ওয়েবসাইটের ইনপুট ফিল্ডে দিতে হবে তাহলেই সমস্ত ইনফো পাওয়া যাবে IP Related","code": ""}
+        ]
+      },{
+        "title": "Secure Password",
+        "sections": [
+          { 
+          "description": "Secure Password তৈরী করার জন্য ১২ ক্যারেক্টারের > লেটার, ডিজিট, সিম্বল , ইত্যাদি মিশ্রন করে লিখতে হবে<br>তবে হ্যা ডিকশনারিতে যে সকল শব্দ আছে সে সকল শব্দ Password তৈরীতে ব্যবহার করা যাবে না<br>কারন Dictionary Attack হলে Password Break হয়ে যাবার সম্ভাবনা অনেক বেশি<br>আবার Brute Force attack হলে Password ১২ ক্যারেক্টারের কম হলে তা Break হয়ে যাবার সম্ভাবনা হয় কারন Brute Force attack প্রতি সেকেন্ডে 350 billion Password Generate করে attack করে",
+          "code": ""}
         ]
       }
     ]

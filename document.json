@@ -321,8 +321,8 @@
         "title": "SQL Injection",
         "sections": [
           { 
-          "description": "",
-          "code": ""}
+          "description": "<h5>SQL ইনজেকশন কি ? </h5><br>SQL Injection হলো এমন একটি হ্যাকিং পদ্ধতি যেখানে হ্যাকার ওয়েবসাইটের ইনপুট ফিল্ড (login, search, id field) ব্যবহার করে ডাটাবেসে নিজের SQL কোড চালায়। অর্থাৎ ওয়েবসাইট যা SQL query চালাবে, হ্যাকার সেই query-টা পরিবর্তন করে দেয়। <h5>২. সাধারণ SQL Query কেমন হয়</h5><br>ধরো তোমার ডাটাবেসে একটি Users টেবিল আছে। <br><br >UserId - Name - Password<br>101 - Rahim - 123<br>102 - Karim - 456<br>103 - Jony - 789 <br><br>ওয়েবসাইটে একজন ইউজার ID দিলে সার্ভার এই SQL চালায় : ",
+          "code": "SELECT * FROM Users WHERE UserId = 105;"},{"description": "মানে UserId = 105 যার, শুধু সেই ইউজারের তথ্য দেখাবে।<br><h5>৩. প্রোগ্রামের ভুল (যেখানে সমস্যা হয়)</h5><br>ধরো কোডটা এমন:","code": "txtUserId = getRequestString(\"UserId\");\ntxtSQL = \"SELECT * FROM Users WHERE UserId = \" + txtUserId;"},{ "description": "এখানে ইউজার যা লিখবে সেটাই সরাসরি SQL query তে ঢুকে যাচ্ছে। এটাই বড় ভুল।<h5>৪. হ্যাকার কি করে</h5> হ্যাকার UserId ফিল্ডে লিখে:","code": "105 OR 1=1"},{ "description": "তখন SQL query হয়ে যায়:","code": "SELECT * FROM Users WHERE UserId = 105 OR 1=1;"},{ "description": "<h5>৫. 1=1 কেন বিপজ্জনক?</h5>Cause - 1=1 সবসময় True<br>তাই SQL এর মানে দাঁড়ায়:","code": "UserId = 105  OR  True"},{ "description": "তাই ডাটাবেস সব ইউজারের ডাটা দেখাবে। হ্যাকার সব ইউজারের username + password পেয়ে যাবে।","code": ""}
         ]
       }
     ]

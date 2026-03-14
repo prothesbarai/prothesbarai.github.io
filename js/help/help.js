@@ -1,5 +1,6 @@
 let categories = [];
 let currentItems = [];
+const lockedCategories = {"Cyber Security": "MTIzNA==",  "Bat Files": "MTIzNA=="};
 
 $(document).ready(function () {
 
@@ -14,7 +15,7 @@ $(document).ready(function () {
           <div class="card text-center shadow-sm border-0 text-white category-card" data-index="${index}" style="background-color:#0bceaf;">
             <div class="card-body">
               <a href="#" class="stretched-link text-decoration-none text-white font-weight-medium">
-                ${cat.name} [${cat.items.length}]
+                ${cat.name} [${cat.items.length}] ${lockedCategories[cat.name] ? '🔒' : ''}
               </a>
             </div>
           </div>
@@ -25,13 +26,37 @@ $(document).ready(function () {
     console.error("document.json লোড হয়নি");
   });
 
+
   // ================= Category Click =================
   $(document).on("click", ".category-card", function (e) {
     e.preventDefault();
     let index = $(this).data("index");
-    currentItems = categories[index].items;
+    let categoryName = categories[index].name;
 
-    $("#categoryModalLabel").text(categories[index].name);
+    // Check if category is locked
+    if (lockedCategories[categoryName]) {
+      let correctPassword = atob(lockedCategories[categoryName]);
+      let userPassword = "";
+
+      while (true) {
+        userPassword = prompt(`"${categoryName}" দেখতে password দিন:`);
+
+        // যদি user Cancel press করে
+        if (userPassword === null) {
+          return; // modal open হবে না
+        }
+
+        // password ঠিক হলে break
+        if (userPassword === correctPassword) {
+          break; // password ঠিক, modal চলবে
+        } else {
+          alert("Password ভুল! আবার চেষ্টা করুন।");
+        }
+      }
+    }
+
+    currentItems = categories[index].items;
+    $("#categoryModalLabel").text(categoryName);
     let list = $("#modalList");
     list.empty();
 

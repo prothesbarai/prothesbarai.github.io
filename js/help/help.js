@@ -1,6 +1,6 @@
 let categories = [];
 let currentItems = [];
-const lockedCategories = {"Cyber Security": "MTIzNA==",  "Bat Files": "MTIzNA=="};
+const lockedCategories = {"Cyber Security": "NzQyNjcy",  "Bat Files": "NzQyNjcy"};
 
 $(document).ready(function () {
 

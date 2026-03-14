@@ -28,33 +28,53 @@ $(document).ready(function () {
 
 
   // ================= Category Click =================
+  // $(document).on("click", ".category-card", function (e) {
+  //   e.preventDefault();
+  //   let index = $(this).data("index");
+  //   let categoryName = categories[index].name;
+
+  //   // Check if category is locked
+  //   if (lockedCategories[categoryName]) {
+  //     let correctPassword = atob(lockedCategories[categoryName]);
+  //     let userPassword = "";
+
+  //     while (true) {
+  //       userPassword = prompt(`"${categoryName}" দেখতে password দিন:`);
+
+  //       // যদি user Cancel press করে
+  //       if (userPassword === null) {
+  //         return; // modal open হবে না
+  //       }
+
+  //       // password ঠিক হলে break
+  //       if (userPassword === correctPassword) {
+  //         break; // password ঠিক, modal চলবে
+  //       } else {
+  //         alert("Password ভুল! আবার চেষ্টা করুন।");
+  //       }
+  //     }
+  //   }
+
+  //   currentItems = categories[index].items;
+  //   $("#categoryModalLabel").text(categoryName);
+  //   let list = $("#modalList");
+  //   list.empty();
+
+  //   currentItems.forEach((item, i) => {
+  //     list.append(`<li class="list-group-item item-clickable" data-index="${i}">${item.title}</li>`);
+  //   });
+
+  //   $("#categoryModal").modal("show");
+  // });
+
+
   $(document).on("click", ".category-card", function (e) {
-    e.preventDefault();
-    let index = $(this).data("index");
-    let categoryName = categories[index].name;
+  e.preventDefault();
+  let index = $(this).data("index");
+  let categoryName = categories[index].name;
+  let correctPassword = lockedCategories[categoryName] ? atob(lockedCategories[categoryName]) : null;
 
-    // Check if category is locked
-    if (lockedCategories[categoryName]) {
-      let correctPassword = atob(lockedCategories[categoryName]);
-      let userPassword = "";
-
-      while (true) {
-        userPassword = prompt(`"${categoryName}" দেখতে password দিন:`);
-
-        // যদি user Cancel press করে
-        if (userPassword === null) {
-          return; // modal open হবে না
-        }
-
-        // password ঠিক হলে break
-        if (userPassword === correctPassword) {
-          break; // password ঠিক, modal চলবে
-        } else {
-          alert("Password ভুল! আবার চেষ্টা করুন।");
-        }
-      }
-    }
-
+  function openCategory() {
     currentItems = categories[index].items;
     $("#categoryModalLabel").text(categoryName);
     let list = $("#modalList");
@@ -65,7 +85,31 @@ $(document).ready(function () {
     });
 
     $("#categoryModal").modal("show");
-  });
+  }
+
+  // যদি locked category হয়
+  if (correctPassword) {
+    $("#passwordInput").val(""); // reset
+    $("#passwordError").hide(); // hide error
+
+    $("#passwordModal").modal("show");
+
+    $("#passwordSubmit").off("click").on("click", function () {
+      let entered = $("#passwordInput").val();
+      if (entered === correctPassword) {
+        $("#passwordModal").modal("hide");
+        openCategory();
+      } else {
+        $("#passwordError").show();
+      }
+    });
+  } else {
+    openCategory();
+  }
+});
+
+
+
 
   // ================= Item Click =================
   $(document).on("click", ".item-clickable", function () {

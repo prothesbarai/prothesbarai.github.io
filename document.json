@@ -93,19 +93,7 @@
   {
     "name": "SQL",
     "items": [
-      {
-        "title": "PHP Command Example",
-        "sections": [
-          {
-            "description": "Show current directory",
-            "code": "pwd"
-          },
-          {
-            "description": "List all files and directories",
-            "code": "ls -la"
-          }
-        ]
-      }
+      {"title": "SQL Query Placeholder (?) With Every Language","sections": [{"description": "<h5>1️⃣ ? হলো SQL placeholder</h5> অনেক database বা SQL driver (যেমন MySQL, SQLite, PostgreSQL এর কিছু driver) ? কে placeholder হিসেবে চিনে।মানে: query এ variable value পরে বসানো হবে।<br>উদাহরণ (Go + MySQL):", "code": "db.Query(\"SELECT * FROM users WHERE age > ?\", 18)"},{"description": "Python (sqlite3) এ একইভাবে:","code": "cursor.execute(\"SELECT * FROM users WHERE age > ?\", (18,))"},{"description": "<h5>2️⃣ সব SQL driver ? ব্যবহার করে কি?</h5>না, সব driver একইভাবে ? ব্যবহার করে না। কিছু driver named parameter ব্যবহার করে। PostgreSQL এ $ ব্যবহার করতে হয়। <br> Some Example : <br><br><table border='1' cellpadding='5' cellspacing='0'><thead><tr><th>Database</th><th>Placeholder Style</th><th>উদাহরণ (Go)</th><th>উদাহরণ (Python)</th><th>Notes</th></tr></thead><tbody><tr><td>MySQL / MariaDB</td><td>?</td><td>db.Query(\"SELECT * FROM users WHERE age > ?\", 18)</td><td>cursor.execute(\"SELECT * FROM users WHERE age > ?\", (18,))</td><td>সাধারণভাবে ব্যবহৃত, SQL injection থেকে নিরাপদ</td></tr><tr><td>SQLite</td><td>? বা ?1, ?2</td><td>db.Query(\"SELECT * FROM users WHERE id = ?\", id)</td><td>cursor.execute(\"SELECT * FROM users WHERE id = ?\", (id,))</td><td>?1, ?2 positional parameters হিসেবে ব্যবহার করা যায়</td></tr><tr><td>PostgreSQL</td><td>$1, $2, ...</td><td>db.Query(\"SELECT * FROM users WHERE age > $1\", age)</td><td>cursor.execute(\"SELECT * FROM users WHERE age > $1\", (age,))</td><td>Numbered parameters, argument এর position অনুযায়ী</td></tr><tr><td>SQL Server</td><td>@param বা ? (driver-specific)</td><td>db.Query(\"SELECT * FROM users WHERE name = @name\", sql.Named(\"name\", name))</td><td>pyodbc: cursor.execute(\"SELECT * FROM users WHERE name = ?\", name)</td><td>Driver অনুযায়ী syntax পরিবর্তিত হয়</td></tr><tr><td>Oracle</td><td>:1, :2 বা named</td><td>db.Query(\"SELECT * FROM users WHERE age = :1\", age)</td><td>cursor.execute(\"SELECT * FROM users WHERE age = :1\", [age])</td><td>Numbered বা named binding ব্যবহার করা যায়</td></tr></tbody></table>","code": "" }]}
     ]
   },
   {
@@ -142,7 +130,7 @@
     "name": "WORDPRESS",
     "items": [
       {
-        "title": "PHP Command Example",
+        "title": "Wordpress Command Example",
         "sections": [
           {
             "description": "Show current directory",

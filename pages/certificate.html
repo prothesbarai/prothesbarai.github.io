@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Prothes Barai</title>
+    <title>Prothes Barai's (Certificates)</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Prothes Barai" name="keywords">
     <meta content="Prothes Barai" name="description">
@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Atomic+Age&family=Concert+One&family=Croissant+One&family=Kenia&family=Lobster&family=Nosifer&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -30,82 +31,52 @@
     <!-- Floating Whatsapp Css -->
     <link rel="stylesheet" href="..//css/whatsapp_and_chat.css">
 
-
-    <!-- Live Projects Page Design & Animation Purpose CSS -->
+    <!-- For Certificate Page Only -->
     <style>
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            font-family: Segoe UI;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 45px;
-            font-weight: 700;
-            margin-bottom: 50px;
+            background: #0f172a;
+            color: #fff;
         }
 
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Card */
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
             overflow: hidden;
-            transition: 0.4s;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
         }
 
-        .project-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+        .card:hover {
+            transform: translateY(-8px);
         }
 
-        .project-card img {
+        /* Thumbnail */
+        .thumb {
             height: 220px;
+            width: 100%;
             object-fit: cover;
         }
-        
-        .project-card h5 {
-            color: #0bceaf;
-        }
 
-        .card-body {
-            color: rgb(255, 255, 255);
-        }
-
-        .badge {
-            margin-right: 5px;
-        }
-
-        .btn-live {
-            border-radius: 30px;
-        }
-
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s;
-        }
-
-        .fade-up.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .project-card {
-            position: relative; 
-        }
-
-        .live-badge-top {
+        /* Verify Button */
+        .verify-btn {
             position: absolute;
-            top: 10px; 
-            border: 1px solid red;         
-            right: 10px;        
-            background-color: white; 
-            color: red;       
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 20px;
-            z-index: 10;        
-            font-size: 0.9rem;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+        }
+
+        /* Modal */
+        .modal-content {
+            background: #000;
+            color: #fff;
+        }
+
+        .preview-frame {
+            width: 100%;
+            height: 90vh;
+            border: none;
         }
     </style>
 </head>
@@ -124,7 +95,6 @@
             </div>
         </div> -->
     <!-- Loader End Here -->
-
 
     <!-- Floating Whatsapp -->
     <div class="floating_whatsapp" id="mydiv">
@@ -160,7 +130,6 @@
                         <a class="dropdown-item ltrAnimated" href="./help.html" target="_blank">Help Document</a>
                         <a class="dropdown-item ltrAnimated" href="./certificate.html" target="_blank">Certificates</a>
 
-
                         <!-- Sub Drop Down 3 -->
                         <div class="dropdown-submenu dropright">
                             <button type="button" class="dropdown-toggle test dropdown-item ltrAnimated"
@@ -168,7 +137,8 @@
                                 My Projects
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item ltrAnimated" href="live_projects.html" target="_blank"><i class="live-dot"></i> Live Projects</a>
+                                <a class="dropdown-item ltrAnimated" href="live_projects.html" target="_blank"><i
+                                        class="live-dot"></i> Live Projects</a>
                                 <a class="dropdown-item ltrAnimated" href="website.html" target="_blank">Website
                                     Projects</a>
                                 <a class="dropdown-item ltrAnimated" href="animation.html" target="_blank">Animation
@@ -180,7 +150,8 @@
 
                         <!-- Single Drop Down -->
                         <a class="dropdown-item ltrAnimated" href="./artificial intiligence.html"
-                            target="_blank">Artificial Intelligence</a>
+                            target="_blank">Artificial
+                            Intelligence</a>
                     </div>
                 </div>
 
@@ -199,116 +170,37 @@
 
 
 
-    <div class="container-fluid py-5" id="contact">
-
-        <div class="container py-5">
-            <div class="position-relative d-flex align-items-center justify-content-center" data-aos="zoom-in"
-                data-aos-duration="1000">
-                <h1 class="display-1 text-uppercase text-dark opacity-25" style="-webkit-text-stroke: 1px #dee2e6;">Live Projects
-                </h1>
-                <h1 class="position-absolute text-uppercase text-primary"><u>My Live Projects</u></h1>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*"> All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first"> Android Apps </li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second"> Websites</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third"> Automation </li>
-                    </ul>
-                </div>
-            </div>
 
 
 
-            <div class="row g-4 portfolio-container">
-                <!-- Flutter App -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="card project-card">
-                        <img src="../img/live_projects_img/paikaree.png" class="img-fluid rounded">
-                        <!-- Live badge top-right -->
-                        <span class="badge live-badge-top"><i class="live-dot"></i> Live</span>
-                        <div class="card-body">
-                            <h5>Paikaree E-commerce App</h5>
-                            <p>Paikaree Ecommerce mobile application available on Play Store.</p>
-                            <!-- <span class="badge bg-primary">Flutter</span> -->
-                            <span class="badge bg-success">Android (Kotlin)</span>
-                            <span class="badge bg-info">iOS (Swift)</span>
-                            <br><br>
-                            <a href="https://play.google.com/store/apps/details?id=com.paikaree.bd"class="btn btn-success btn-sm" target="_blank">View App</a>
-                        </div>
-                    </div>
+    <div class="container py-5">
+
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5 pb-5" data-aos="zoom-in"
+            data-aos-duration="1000">
+            <h1 class="display-1 text-uppercase text-dark opacity-25" style="-webkit-text-stroke: 1px #dee2e6;">
+                Certificates
+            </h1>
+            <h1 class="position-absolute text-uppercase text-primary"><u>🏆 My Certificates</u></h1>
+        </div>
+
+
+        <div class="row g-4" id="portfolio"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="previewModal">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header border-0">
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="card project-card">
-                        <img src="../img/live_projects_img/commingsoon.png" class="img-fluid rounded">
-                        <!-- Live badge top-right -->
-                        <!-- <span class="badge live-badge-top"><i class="live-dot"></i> Live</span> -->
-                        <div class="card-body">
-                            <h5>Pai-Merchant App</h5>
-                            <p>Comming<br>Soon</p>
-                            <!-- <span class="badge bg-primary">Flutter</span> -->
-                            <span class="badge bg-success">Android (Kotlin)</span>
-                            <span class="badge bg-info">iOS (Swift)</span>
-                            <br><br>
-                            <a href="https://play.google.com/store/apps/"class="btn btn-success btn-sm" target="_blank">View App</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Website -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="card project-card">
-                        <img src="../img/live_projects_img/gamingExpresspro.png" class="img-fluid rounded">
-                        <!-- Live badge top-right -->
-                        <span class="badge live-badge-top"><i class="live-dot"></i> Live</span>
-                        <div class="card-body">
-                            <h5>Gaming Express Pro</h5>
-                            <p>WordPress ecommerce website built using Porto theme.</p>
-                            <span class="badge bg-warning">WordPress</span>
-                            <span class="badge bg-info">WooCommerce</span>
-                            <br><br>
-                            <a href="https://gamingexpresspro.com/" class="btn btn-primary btn-sm" target="_blank">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Automation -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="card project-card">
-                        <img src="../img/live_projects_img/commingsoon.png" class="img-fluid rounded">
-                        <!-- Live badge top-right -->
-                        <!-- <span class="badge live-badge-top"><i class="live-dot"></i> Live</span> -->
-                        <div class="card-body">
-                            <h5>Comming Soon</h5>
-                            <p>Java + Selenium automation system for web automation.</p>
-                            <span class="badge bg-danger">Java</span>
-                            <span class="badge bg-secondary">Selenium</span>
-                            <br><br>
-                            <a href="#" class="btn btn-dark btn-sm">Details</a>
-                        </div>
-                    </div>
-                </div>
-
-
+                <div class="modal-body" id="previewContent"></div>
 
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -367,10 +259,9 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="..//loader file/js/loader_js.js"></script> -->
 
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/typed/typed.min.js"></script>
     <script src="../lib/easing/easing.min.js"></script>
     <script src="../lib/waypoints/waypoints.min.js"></script>
@@ -383,7 +274,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <!--For Animation Section -->
+    <!--For Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -398,6 +289,143 @@
             });
         });
     </script>
+
+
+
+    <!-- Only For Certificate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+    <script>
+
+        // DATA (just add here)
+        const items = [
+            // {
+            //     title: "App Development Certificate",
+            //     file: "image1.jpg",
+            //     type: "image",
+            //     verify: "https://verify.com/certificate1"
+            // },
+            // {
+            //     title: "Programming Certificate PDF",
+            //     file: "https://example.com",
+            //     type: "web",
+            //     verify: "https://verify.com/certificate2"
+            // },
+            {
+                title: "Deep Learning Fundamentals",
+                file: "https://prothesbarai.github.io/prothesbarai/certificates/Deep%20Learning%20Fundamentals.pdf",
+                type: "pdf",
+                verify: "https://courses.cognitiveclass.ai/certificates/25bdf371bc894688b21ed3e772f3c8ce?fbclid=IwdGRjcAQ2-btjbGNrAsunO2V4dG4DYWVtAjExAAEeM2yi7rpxbEkB6aYeS7EwQ8BgePDjsWHEGYkixoFi93nM0wKolmy8aZSHt74_aem_pjUJ6VFQH1A4BO-SW6bF5w"
+            },
+            {
+                title: "UpComming",
+                file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                type: "pdf",
+                verify: ""
+            },
+            {
+                title: "UpComming",
+                file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                type: "pdf",
+                verify: ""
+            },
+            {
+                title: "UpComming",
+                file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                type: "pdf",
+                verify: ""
+            },
+            {
+                title: "UpComming",
+                file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                type: "pdf",
+                verify: ""
+            },
+            {
+                title: "UpComming",
+                file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                type: "pdf",
+                verify: ""
+            }
+        ];
+        // Render items
+        const container = document.getElementById("portfolio");
+        items.forEach(item => {
+            let cardId = "thumb_" + Math.random().toString(36).substr(2, 9);
+            let verifyBtn = item.verify ? `<a href="${item.verify}" target="_blank" class="btn btn-success btn-sm verify-btn">✔ Verify</a>` : "";
+            container.innerHTML += `
+                <div class="col-md-4">
+                    <div class="card" onclick="openPreview('${item.file}', '${item.type}')">
+                        <div id="${cardId}">
+                            <img src="https://via.placeholder.com/300x200?text=Loading..." class="thumb">
+                        </div>
+                        <div class="p-3">${item.title}</div>
+                        ${verifyBtn}
+                    </div>
+                </div>
+                `;
+
+            //  Thumbnail logic
+            if (item.type === "image") {
+                document.getElementById(cardId).innerHTML = `<img src="${item.file}" class="thumb">`;
+            }
+            else if (item.type === "pdf") {
+                generatePDFThumbnail(item.file, function (img) {
+                    document.getElementById(cardId).innerHTML = `<img src="${img}" class="thumb">`;
+                });
+            }
+            else {
+                document.getElementById(cardId).innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="thumb">`;
+            }
+
+        });
+
+        // Preview function
+        function openPreview(file, type) {
+
+            let content = "";
+
+            if (type === "image") {
+                content = `<img src="${file}" class="w-100">`;
+            }
+            else if (type === "pdf") {
+                content = `<iframe src="${file}" class="preview-frame"></iframe>`;
+            }
+            else if (type === "web") {
+                content = `<iframe src="${file}" class="preview-frame"></iframe>`;
+            }
+            document.getElementById("previewContent").innerHTML = content;
+            new bootstrap.Modal(document.getElementById('previewModal')).show();
+        }
+
+
+        function generatePDFThumbnail(url, callback) {
+            const loadingTask = pdfjsLib.getDocument(url);
+
+            loadingTask.promise.then(pdf => {
+                pdf.getPage(1).then(page => {
+
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale });
+
+                    const canvas = document.createElement("canvas");
+                    const context = canvas.getContext("2d");
+
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise.then(() => {
+                        const img = canvas.toDataURL("image/png");
+                        callback(img);
+                    });
+                });
+            });
+        }
+    </script>
+
 
 </body>
 

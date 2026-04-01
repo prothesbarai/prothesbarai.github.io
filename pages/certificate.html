@@ -78,6 +78,17 @@
             height: 90vh;
             border: none;
         }
+
+        .tooltip-inner {
+            background-color: #0bceaf;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 8px;
+        }
+
+        .tooltip.bs-tooltip-top .tooltip-arrow::before {
+            border-top-color: #0bceaf;
+        }
     </style>
 </head>
 
@@ -315,36 +326,42 @@
                 title: "Cyber Hygiene",
                 file: "https://prothesbarai.github.io/prothesbarai/certificates/Cyber%20Hygiene.pdf",
                 type: "pdf",
-                verify: "https://sf-cyber-sochetonota.s3.ap-southeast-1.amazonaws.com/public/course/certificate/engr_prothes_barai_cyber_hygiene_110033.pdf"
-            },{
+                verify: "https://sf-cyber-sochetonota.s3.ap-southeast-1.amazonaws.com/public/course/certificate/engr_prothes_barai_cyber_hygiene_110033.pdf",
+                tooltip: "Cyber Hygiene"
+            }, {
                 title: "Deep Learning Fundamentals",
                 file: "https://prothesbarai.github.io/prothesbarai/certificates/Deep%20Learning%20Fundamentals.pdf",
                 type: "pdf",
-                verify: "https://courses.cognitiveclass.ai/certificates/25bdf371bc894688b21ed3e772f3c8ce?fbclid=IwdGRjcAQ2-btjbGNrAsunO2V4dG4DYWVtAjExAAEeM2yi7rpxbEkB6aYeS7EwQ8BgePDjsWHEGYkixoFi93nM0wKolmy8aZSHt74_aem_pjUJ6VFQH1A4BO-SW6bF5w"
+                verify: "https://courses.cognitiveclass.ai/certificates/25bdf371bc894688b21ed3e772f3c8ce?fbclid=IwdGRjcAQ2-btjbGNrAsunO2V4dG4DYWVtAjExAAEeM2yi7rpxbEkB6aYeS7EwQ8BgePDjsWHEGYkixoFi93nM0wKolmy8aZSHt74_aem_pjUJ6VFQH1A4BO-SW6bF5w",
+                tooltip: "Deep Learning Fundamentals"
             },
             {
                 title: "App Development With Flutter",
                 file: "https://prothesbarai.github.io/collect/web_certificate/alison_flutter.pdf",
                 type: "pdf",
-                verify: "https://alison.com/verify/a0ccc823e7"
+                verify: "https://alison.com/verify/a0ccc823e7",
+                tooltip: "Mobile App Development With Flutter"
             },
             {
                 title: "UpComming",
                 file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
                 type: "pdf",
-                verify: ""
+                verify: "",
+                tooltip: "কার্যকরী নেতৃত্ব হলো ব্যক্তি, দল বা সমগ্র সংস্থাকে সাধারণ লক্ষ্যের দিকে অনুপ্রাণিত ও পরিচালিত করার ক্ষমতা, যার মাধ্যমে আস্থা, সহযোগিতা এবং অভিন্ন উদ্দেশ্যের অনুভূতি জাগিয়ে তোলা হয়। এর জন্য প্রয়োজন একটি সুস্পষ্ট রূপকল্প নির্ধারণ করা, তথ্যভিত্তিক সিদ্ধান্ত গ্রহণ করা, অন্যদের ক্ষমতায়ন করা, কার্যকরভাবে যোগাযোগ স্থাপন করা এবং এমন একটি ইতিবাচক কর্মপরিবেশ গড়ে তোলা যা প্রবৃদ্ধি, উদ্ভাবন এবং কৌশলগত চিন্তাভাবনাকে উৎসাহিত করে। "
             },
             {
                 title: "UpComming",
                 file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
                 type: "pdf",
-                verify: ""
+                verify: "",
+                tooltip: ""
             },
             {
                 title: "UpComming",
                 file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
                 type: "pdf",
-                verify: ""
+                verify: "",
+                tooltip: ""
             }
         ];
         // Render items
@@ -354,7 +371,7 @@
             let verifyBtn = item.verify ? `<a href="${item.verify}" target="_blank" class="btn btn-success btn-sm verify-btn">✔ Verify</a>` : "";
             container.innerHTML += `
                 <div class="col-md-4">
-                    <div class="card" onclick="openPreview('${item.file}', '${item.type}')">
+                    <div class="card" onclick="openPreview('${item.file}', '${item.type}')" data-bs-toggle="tooltip" data-bs-placement="top" title="${item.tooltip || item.title}">
                         <div id="${cardId}">
                             <img src="..//img/certificate/CertificatePlaceholder.png" class="thumb">
                         </div>
@@ -423,6 +440,14 @@
                 });
             });
         }
+
+        // Bootstrap tooltip init
+        document.addEventListener("DOMContentLoaded", function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (el) {
+                return new bootstrap.Tooltip(el);
+            });
+        });
     </script>
 
 

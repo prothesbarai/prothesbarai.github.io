@@ -130,19 +130,12 @@
     ]
   },
   {
-    "name": "WORDPRESS",
+    "name": "MySQL With GoLang",
     "items": [
       {
-        "title": "Wordpress Command Example",
+        "title": "Data Types with GoLang Mapping",
         "sections": [
-          {
-            "description": "Show current directory",
-            "code": "pwd"
-          },
-          {
-            "description": "List all files and directories",
-            "code": "ls -la"
-          }
+          {"description": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%; text-align: left;\">\n<thead>\n<tr>\n<th>DB Type</th>\n<th>Category</th>\n<th>Size</th>\n<th>Format Example</th>\n<th>Go Model Type</th>\n<th>Parsing Needed</th>\n<th>Query Support</th>\n<th>Performance</th>\n<th>Use Case</th>\n</tr>\n</thead>\n<tbody>\n<tr><td>TINYINT</td><td>Number</td><td>1B</td><td>1</td><td>int / bool</td><td>No</td><td>Yes</td><td>Fast</td><td>Status, Boolean</td></tr>\n<tr><td>SMALLINT</td><td>Number</td><td>2B</td><td>100</td><td>int</td><td>No</td><td>Yes</td><td>Fast</td><td>Small সংখ্যা</td></tr>\n<tr><td>INT</td><td>Number</td><td>4B</td><td>1000</td><td>int</td><td>No</td><td>Yes</td><td>Fast</td><td>ID (Most Used)</td></tr>\n<tr><td>BIGINT</td><td>Number</td><td>8B</td><td>999999999</td><td>int64</td><td>No</td><td>Yes</td><td>Fast</td><td>Large Data</td></tr>\n<tr><td>DECIMAL</td><td>Number</td><td>Custom</td><td>99.99</td><td>float64 / string</td><td>No</td><td>Yes</td><td>Fast</td><td>Price (Best)</td></tr>\n<tr><td>FLOAT</td><td>Number</td><td>4B</td><td>10.5</td><td>float32</td><td>No</td><td>Yes</td><td>Fast</td><td>Approx Value</td></tr>\n<tr><td>DOUBLE</td><td>Number</td><td>8B</td><td>10.5555</td><td>float64</td><td>No</td><td>Yes</td><td>Fast</td><td>Scientific</td></tr>\n<tr><td>CHAR</td><td>String</td><td>Fixed</td><td>ABC</td><td>string</td><td>No</td><td>Yes</td><td>Fast</td><td>Fixed Length</td></tr>\n<tr><td>VARCHAR</td><td>String</td><td>~65KB</td><td>Product</td><td>string</td><td>No</td><td>Yes</td><td>Fast</td><td>Most Used</td></tr>\n<tr><td>TEXT</td><td>String</td><td>64KB</td><td>Long Text</td><td>string</td><td>No</td><td>Yes</td><td>Medium</td><td>Description</td></tr>\n<tr><td>MEDIUMTEXT</td><td>String</td><td>16MB</td><td>Big Text</td><td>string</td><td>No</td><td>Yes</td><td>Slow</td><td>Large Content</td></tr>\n<tr><td>LONGTEXT</td><td>String</td><td>4GB</td><td>Huge Data</td><td>string</td><td>No</td><td>Yes</td><td>Slow</td><td>Very Large Text</td></tr>\n<tr><td>DATE</td><td>Date</td><td>3B</td><td>2026-04-08</td><td>string / time.Time</td><td>No</td><td>Yes</td><td>Fast</td><td>Date Only</td></tr>\n<tr><td>TIME</td><td>Time</td><td>3B</td><td>12:30:00</td><td>string</td><td>No</td><td>Yes</td><td>Fast</td><td>Time</td></tr>\n<tr><td>DATETIME</td><td>DateTime</td><td>8B</td><td>2026-04-08 12:30:00</td><td>time.Time</td><td>No</td><td>Yes</td><td>Fast</td><td>General Time</td></tr>\n<tr><td>TIMESTAMP</td><td>DateTime</td><td>4B</td><td>Auto</td><td>time.Time</td><td>No</td><td>Yes</td><td>Fast</td><td>Created At</td></tr>\n<tr><td>JSON</td><td>Special</td><td>Variable</td><td>[1,2]</td><td>[]int / map</td><td>No</td><td>Yes</td><td>Optimized</td><td>Array/Object (Best)</td></tr>\n<tr><td>ENUM</td><td>Special</td><td>Small</td><td>active</td><td>string</td><td>No</td><td>Yes</td><td>Fast</td><td>Fixed Values</td></tr>\n<tr><td>SET</td><td>Special</td><td>Small</td><td>a,b</td><td>string</td><td>No</td><td>Limited</td><td>Fast</td><td>Multi Select</td></tr>\n<tr><td>BLOB</td><td>Binary</td><td>64KB</td><td>Binary</td><td>[]byte</td><td>No</td><td>No</td><td>Slow</td><td>File Storage</td></tr>\n<tr><td>MEDIUMBLOB</td><td>Binary</td><td>16MB</td><td>Binary</td><td>[]byte</td><td>No</td><td>No</td><td>Slow</td><td>Large File</td></tr>\n<tr><td>LONGBLOB</td><td>Binary</td><td>4GB</td><td>Binary</td><td>[]byte</td><td>No</td><td>No</td><td>Slow</td><td>Huge File</td></tr>\n</tbody>\n</table>","code": ""}
         ]
       }
     ]

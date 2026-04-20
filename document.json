@@ -286,6 +286,9 @@
           },{
             "description": "<h5>Note : </h5> <b><mark>Scaffold</mark></b> widget warped by <b><mark>RepaintBoundary</mark></b> widget & <b><mark>Scaffold</mark></b> widget bg Color set ",
             "code": "backgroundColor: Colors.black,"
+          },{
+            "description": "<b>Demo Design : </b><img src=\"https://prothesbarai.github.io/collect/UI_DESIGN/gridAndWavy.png\" width=\"300\" height=\"auto\" alt=\"Demo Design\">",
+            "code": ""
           }
         ]
       }

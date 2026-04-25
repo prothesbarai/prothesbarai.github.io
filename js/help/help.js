@@ -1,11 +1,16 @@
 let categories = [];
 let currentItems = [];
-const lockedCategories = {"Cyber Security": "NzQyNjcy",  "Bat Files": "NzQyNjcy"};
+const lockedCategories = { "Cyber Security": "NzQyNjcy", "Bat Files": "NzQyNjcy", "GoLang": "U2hyZXlhc2lQcm90aGVzQW5na2Fu" };
+//let jsonSource = "../document.json";
+let sp = "aHR0cHM6Ly9wcm90aGVzYmFyYWkuZ2l0aHViLmlvL2NvbGxlY3QvSGVscC9kb2N1bWVudC5qc29u";
+let asp = atob(sp);
+
+ 
 
 $(document).ready(function () {
 
   // ================= Load JSON Data =================
-  $.getJSON("../document.json", function (data) {
+  $.getJSON(asp, function (data) {
     categories = data;
 
     let categoryContainer = $("#categoryContainer");
@@ -69,44 +74,48 @@ $(document).ready(function () {
 
 
   $(document).on("click", ".category-card", function (e) {
-  e.preventDefault();
-  let index = $(this).data("index");
-  let categoryName = categories[index].name;
-  let correctPassword = lockedCategories[categoryName] ? atob(lockedCategories[categoryName]) : null;
+    e.preventDefault();
+    let index = $(this).data("index");
+    let categoryName = categories[index].name;
+    let correctPassword = lockedCategories[categoryName] ? atob(lockedCategories[categoryName]) : null;
 
-  function openCategory() {
-    currentItems = categories[index].items;
-    $("#categoryModalLabel").text(categoryName);
-    let list = $("#modalList");
-    list.empty();
+    function openCategory() {
+      currentItems = categories[index].items;
+      $("#categoryModalLabel").text(categoryName);
+      let list = $("#modalList");
+      list.empty();
 
-    currentItems.forEach((item, i) => {
-      list.append(`<li class="list-group-item item-clickable" data-index="${i}">${item.title}</li>`);
-    });
+      currentItems.forEach((item, i) => {
+        list.append(`<li class="list-group-item item-clickable" data-index="${i}">${item.title}</li>`);
+      });
 
-    $("#categoryModal").modal("show");
-  }
+      $("#categoryModal").modal("show");
+    }
 
-  // যদি locked category হয়
-  if (correctPassword) {
-    $("#passwordInput").val(""); // reset
-    $("#passwordError").hide(); // hide error
+    // যদি locked category হয়
+    if (correctPassword) {
+      $("#passwordInput").val(""); // reset
+      $("#passwordError").hide(); // hide error
 
-    $("#passwordModal").modal("show");
+      $("#passwordModal").modal("show");
 
-    $("#passwordSubmit").off("click").on("click", function () {
-      let entered = $("#passwordInput").val();
-      if (entered === correctPassword) {
-        $("#passwordModal").modal("hide");
-        openCategory();
-      } else {
-        $("#passwordError").show();
-      }
-    });
-  } else {
-    openCategory();
-  }
-});
+      $("#passwordSubmit").off("click").on("click", function () {
+        let entered = $("#passwordInput").val();
+        if (entered === correctPassword) {
+          $("#passwordModal").modal("hide");
+
+          // Wait until modal পুরোপুরি hide হয়
+          $("#passwordModal").one("hidden.bs.modal", function () {
+            openCategory();
+          });
+        } else {
+          $("#passwordError").show();
+        }
+      });
+    } else {
+      openCategory();
+    }
+  });
 
 
 

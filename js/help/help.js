@@ -1,7 +1,7 @@
 let categories = [];
 let currentItems = [];
 // U2hyZXlhc2lQcm90aGVzQW5na2Fu
-const lockedCategories = { "Cyber Security": "NzQyNjcy", "Bat Files": "NzQyNjcy", "GoLang": "","Vertual Box Setup": "NzQyNjcy", "KALI-Linux Command": "" };
+const lockedCategories = { "Cyber Security": "NzQyNjcy", "Bat Files": "NzQyNjcy", "GoLang": "U2hyZXlhc2lQcm90aGVzQW5na2Fu","Vertual Box Setup": "NzQyNjcy", "KALI-Linux Command": "" };
 let helperCDN_0x9a3f = "Li4vZG9jdW1lbnQuanNvbg==";
 //let helperCDN_0x9a3f = "aHR0cHM6Ly9wcm90aGVzYmFyYWkuZ2l0aHViLmlvL2NvbGxlY3QvSGVscC9kb2N1bWVudC5qc29u";
 
